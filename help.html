@@ -6101,20 +6101,20 @@ actionlog
 <div class="page">
 <a id="adminskinvar-eventformextra" name="adminskinvar-eventformextra"></a>
 <h1>管理領域用スキン変数：eventformextra</h1>
-<p>Make a formextra event occur.</p>
+<p>formextraイベントを発生させます</p>
 <h2>引数</h2>
 <p>
-form type
+フォームのタイプ
 <ul>
-<li>activation : for activate skintype.</li>
-<li>membermailform-notloggedin : for createaccountinput skintype.</li>
+<li>activation : [アクティベーション]ページ用</li>
+<li>membermailform-notloggedin : [アカウントの新規作成]ページ用</li>
 </ul>
 </p>
 <h2>スキンタイプ</h2>
 <p>
 <ul>
-<li>activate</li>
-<li>createaccountinput</li>
+<li>[アクティベーション]ページ</li>
+<li>[アカウントの新規作成]ページ</li>
 </ul>
 </p>
 <h2>例</h2>
@@ -6127,24 +6127,24 @@ form type
 <div class="page">
 <a id="adminskinvar-getblogsetting" name="adminskinvar-getblogsetting"></a>
 <h1>管理領域用スキン変数：getblogsetting</h1>
-<p>Blogsettings is output.</p>
+<p>Blogsettingsの内容を出力します</p>
 <h2>引数</h2>
 <p>
 <ul>
-<li>id:blog ID</li>
-<li>url:blog URL</li>
-<li>name:blog Name</li>
-<li>desc:blog Description</li>
-<li>short:blog Short Name</li>
-<li>notifyaddress:blog admin notify address</li>
-<li>maxcomments:blog Max Comments</li>
-<li>updatefile:Update File</li>
-<li>timeoffset:Time Offset</li>
+<li>id:ブログのID</li>
+<li>url:ブログのURL</li>
+<li>name:ブログの名前</li>
+<li>desc:ブログの説明</li>
+<li>short:ブログの短縮名(略称) </li>
+<li>notifyaddress:通知するメールアドレス </li>
+<li>maxcomments:一覧に表示するコメントの最大数 </li>
+<li>updatefile:自動更新するファイル</li>
+<li>timeoffset:サーバ時刻との時差 </li>
 </ul>
 </p>
 <h2>スキンタイプ</h2>
 <p>
-addnewlog
+[新しいblogが作成されました]ページ
 </p>
 <h2>例</h2>
 <pre>
@@ -6156,29 +6156,29 @@ addnewlog
 <div class="page">
 <a id="adminskinvar-blogsetting" name="adminskinvar-blogsetting"></a>
 <h1>管理領域用スキン変数：blogsetting</h1>
-<p>Blogsettings is output.</p>
+<p>Blogsettingsの内容を出力します</p>
 <h2>引数</h2>
 <p>
 <ul>
-<li>id:blog ID</li>
-<li>url:blog URL</li>
-<li>name:blog Name</li>
-<li>desc:blog Description</li>
-<li>short:blog Short Name</li>
-<li>notifyaddress:blog admin notify address</li>
-<li>maxcomments:blog Max Comments</li>
-<li>updatefile:Update File</li>
-<li>timeoffset:Time Offset</li>
+<li>id:ブログのID</li>
+<li>url:ブログのURL</li>
+<li>name:ブログの名前</li>
+<li>desc:ブログの説明</li>
+<li>short:ブログの短縮名(略称) </li>
+<li>notifyaddress:通知するメールアドレス </li>
+<li>maxcomments:一覧に表示するコメントの最大数 </li>
+<li>updatefile:自動更新するファイル</li>
+<li>timeoffset:サーバ時刻との時差 </li>
 </ul>
 </p>
 <h2>スキンタイプ</h2>
 <p>
-addnewlog
-banlistnew
-blogsettings
-deleteblog
-manageteam
-teamdelete
+[新しいblogが作成されました]ページ
+[規制するIPアドレスの追加]ページ
+[Blog設定の編集]ページ
+[警告！ Blogを削除すると ～略～ いでください。]ページ
+[Blogのチームを管理する ]ページ
+[このblogのチームリストから削除しようとしています]ページ
 </p>
 <h2>例</h2>
 <pre>
@@ -6190,24 +6190,24 @@ teamdelete
 <div class="page">
 <a id="adminskinvar-requestblogid" name="adminskinvar-requestblogid"></a>
 <h1>管理領域用スキン変数：requestblogid</h1>
-<p>'blogid' in HTTP Request variables is output.</p>
+<p>HTTPリクエストに含まれる'blogid'の値を出力します</p>
 <h2>引数</h2>
 <p>無し</p>
 <h2>スキンタイプ</h2>
 <p>
-addnewlog
-banlist
-banlistdelete
-banlistdeleteconfirm
-banlistnew
-batchteam
-blogsettings
-categorydelete
-categoryedit
-deleteblog
-itemcommentlist
-manageteam
-teamdelete
+[新しいblogが作成されました]ページ
+[アク禁リスト:]ページ
+[アクセス規制の解除]ページ
+[アクセス規制を解除しました]ページ
+[規制するIPアドレスの追加]ページ
+[チームメンバーに対してのバッチ操作]ページ
+[Blog設定の編集]ページ
+[次のカテゴリーを削除しようとしています: (バッチ処理)]ページ
+[カテゴリーの更新]ページ
+[警告！ Blogを削除すると ～略～ いでください。]ページ
+[コメント]ページ
+[Blogのチームを管理する ]ページ
+[このblogのチームリストから削除しようとしています]ページ
 </p>
 <h2>例</h2>
 <pre>
@@ -6219,13 +6219,13 @@ teamdelete
 <div class="page">
 <a id="adminskinvar-skintypehelp" name="adminskinvar-skintypehelp"></a>
 <h1>管理領域用スキン変数：skintypehelp</h1>
-<p>A link to help of the skin type which is being edited at present is output.</p>
+<p>編集中のスキンタイプのヘルプへのリンクを出力します</p>
 <h2>引数</h2>
 <p>無し</p>
 <h2>スキンタイプ</h2>
 <p>
-adminskinedittype
-skinedittype
+管理エリア用設定:[スキンの編集]ページ
+[スキンの編集]ページ
 </p>
 <h2>例</h2>
 <pre>
@@ -6237,27 +6237,27 @@ skinedittype
 <div class="page">
 <a id="adminskinvar-importskininfo" name="adminskinvar-importskininfo"></a>
 <h1>管理領域用スキン変数：importskininfo</h1>
-<p>Information on imported skin/template is output.</p>
+<p>インポートしたスキン/テンプレートの情報を出力します</p>
 <h2>引数</h2>
 <p>
-type
+タイプ
 <ul>
-	<li>info : Information on imported skin</li>
-	<li>snames : Names on imported skin</li>
-	<li>tnames : Names on imported template</li>
-	<li>sclashes : Names on imported skin which conflicts</li>
-	<li>tclashes :　Names on imported template which conflicts</li>
-	<li>skinfile : File names on imported skin</li>
-	<li>mode : Reading mode of skin</li>
+	<li>info : スキンファイル中の&lt;info&gt;タグで括られた情報</li>
+	<li>snames : インポートしたスキンの名前</li>
+	<li>tnames : インポートしたテンプレートの名前</li>
+	<li>sclashes : インポートしたスキンと衝突するスキンの名前</li>
+	<li>tclashes :インポートしたテンプレートと衝突するテンプレートの名前</li>
+	<li>skinfile : インポートしたスキン/テンプレートのファイル名</li>
+	<li>mode : インクルードモード</li>
 </ul>
 </p>
 <h2>スキンタイプ</h2>
 <p>
 <ul>
-	<li>adminskiniedoimport</li>
-	<li>adminskinieimport</li>
-	<li>skiniedoimport</li>
-	<li>skinieimport</li>
+	<li>管理エリア用設定:[スキンとテンプレートを読み込もうとしています]ページ</li>
+	<li>管理エリア用設定:[読み込み完了]ページ</li>
+	<li>[スキンとテンプレートを読み込もうとしています]ページ</li>
+	<li>[読み込み完了]ページ</li>
 </ul>
 </p>
 <h2>例</h2>
@@ -6270,17 +6270,17 @@ type
 <div class="page">
 <a id="adminskinvar-adminbloglink" name="adminskinvar-adminbloglink"></a>
 <h1>管理領域用スキン変数：adminbloglink</h1>
-<p>A link to a blog of id requested in URL is output.</p>
+<p>URLによりIDでリクエストされたブログへのリンクを出力します</p>
 <h2>引数</h2>
-<p>templateName</p>
+<p>テンプレート名</p>
 <h2>スキンタイプ</h2>
 <p>
 	<ul>
-		<li>banlist</li>
-		<li>blogcommentlist</li>
-		<li>blogsettings</li>
-		<li>createitem</li>
-		<li>itemlist</li>
+		<li>[アク禁リスト:]ページ</li>
+		<li>[コメントのリスト:]ページ</li>
+		<li>[Blog設定の編集]ページ</li>
+		<li>[アイテムの追加:]ページ</li>
+		<li>[Blogアイテムの編集: ]ページ</li>
 	</ul>
 </p>
 <h2>例</h2>
@@ -6293,12 +6293,12 @@ type
 <div class="page">
 <a id="adminskinvar-adminbanlist" name="adminskinvar-adminbanlist"></a>
 <h1>管理領域用スキン変数：adminbanlist</h1>
-<p>A list of the ip-address which prohibits access to a blog of id requested in url is output.</p>
+<p>アクセス禁止のIPアドレスのリストを出力します</p>
 <h2>引数</h2>
-<p>templateName</p>
+<p>テンプレート名</p>
 <h2>スキンタイプ</h2>
 <p>
-banlist
+[アク禁リスト:]ページ
 </p>
 <h2>例</h2>
 <pre>
@@ -6310,12 +6310,12 @@ banlist
 <div class="page">
 <a id="adminskinvar-requestiprange" name="adminskinvar-requestiprange"></a>
 <h1>管理領域用スキン変数：requestiprange</h1>
-<p>ip-range which releases regulation is output.</p>
+<p>アクセス規制を解除するIPアドレス(範囲)を出力します</p>
 <h2>引数</h2>
 <p>無し</p>
 <h2>スキンタイプ</h2>
 <p>
-banlistdelete
+[アクセス規制の解除]ページ
 </p>
 <h2>例</h2>
 <pre>
@@ -6327,12 +6327,12 @@ banlistdelete
 <div class="page">
 <a id="adminskinvar-banlistdeletedlist" name="adminskinvar-banlistdeletedlist"></a>
 <h1>管理領域用スキン変数：banlistdeletedlist</h1>
-<p>A list of ip which just released regulation is indicated.</p>
+<p>アクセス規制を解除したIPアドレス(範囲)を出力します</p>
 <h2>引数</h2>
-<p>templateName</p>
+<p>テンプレート名</p>
 <h2>スキンタイプ</h2>
 <p>
-banlistdeleteconfirm
+[アクセス規制を解除しました]ページ
 </p>
 <h2>例</h2>
 <pre>
@@ -6344,12 +6344,12 @@ banlistdeleteconfirm
 <div class="page">
 <a id="adminskinvar-iprangeinput" name="adminskinvar-iprangeinput"></a>
 <h1>管理領域用スキン変数：iprangeinput</h1>
-<p>A list of ip-range regulated now is indicated.</p>
+<p>アクセス規制するIPアドレス(範囲)を出力します</p>
 <h2>引数</h2>
 <p>無し</p>
 <h2>スキンタイプ</h2>
 <p>
-banlistnew
+[規制するIPアドレスの追加]ページ
 </p>
 <h2>例</h2>
 <pre>
@@ -6361,17 +6361,17 @@ banlistnew
 <div class="page">
 <a id="adminskinvar-adminbatchaction" name="adminskinvar-adminbatchaction"></a>
 <h1>管理領域用スキン変数：adminbatchaction</h1>
-<p>Requested batchaction is indicated in URL.</p>
+<p>URLでリクエストされたバッチ処理をします</p>
 <h2>引数</h2>
 <p>無し</p>
 <h2>スキンタイプ</h2>
 <p>
 	<ul>
-		<li>batchcategory</li>
-		<li>batchcomment</li>
-		<li>batchitem</li>
-		<li>batchmember</li>
-		<li>batchteam</li>
+		<li>[カテゴリーに対してのバッチ操作]ページ</li>
+		<li>[コメントに対してのバッチ操作]ページ</li>
+		<li>[アイテムに対してのバッチ操作]ページ</li>
+		<li>[メンバーに対してのバッチ操作]ページ</li>
+		<li>[チームメンバーに対してのバッチ操作]ページ</li>
 	</ul>
 </p>
 <h2>例</h2>
@@ -6384,18 +6384,18 @@ banlistnew
 <div class="page">
 <a id="adminskinvar-adminbatchlist" name="adminskinvar-adminbatchlist"></a>
 <h1>管理領域用スキン変数：adminbatchlist</h1>
-<p>A list of items/comments/members/teams/categories during a batch processing is indicated.</p>
+<p>アイテム/コメント/メンバー/チームメンバー/カテゴリーに対してのバッチ操作の一覧を出力します</p>
 <h2>引数</h2>
-<p>templateName</p>
+<p>テンプレート名</p>
 <h2>スキンタイプ</h2>
 <p>
 	<ul>
-		<li>batchcategory</li>
-		<li>batchcomment</li>
-		<li>batchitem</li>
-		<li>batchmember</li>
-		<li>batchteam</li>
-		<li>blogcommentlist</li>
+		<li>[カテゴリーに対してのバッチ操作]ページ</li>
+		<li>[コメントに対してのバッチ操作]ページ</li>
+		<li>[アイテムに対してのバッチ操作]ページ</li>
+		<li>[メンバーに対してのバッチ操作]ページ</li>
+		<li>[チームメンバーに対してのバッチ操作]ページ</li>
+		<li>[コメントのリスト:]ページ</li>
 	</ul>
 
 </p>
