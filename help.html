@@ -5978,7 +5978,6 @@ all
 <a href="#parser-properties" title="A list of available parser properties">パーサーのプロパティ</a>を設定します。
 </p>
 <h2>引数</h2>
-<p>
 <ul>
     <li>必須：
         <table summary="Skin/Template var::Set::Require">
@@ -5997,8 +5996,6 @@ all
         </table>
     </li>
 </ul>
-
-</p>
 <h2>スキンタイプ</h2>
 <p>全て</p>
 <h2>例</h2>
@@ -6074,19 +6071,16 @@ actionlog
 <h1>管理領域用スキン変数：activationmessage</h1>
 <p>アクティベーションのメッセージを出力します</p>
 <h2>引数</h2>
-<p>
-	type, TemplateName
-	<ul>
-		<li>必須：type:メッセージのタイプ
-			<ul>
-				<li>title:ウェルカムメッセージ</li>
-				<li>text:アクティベーションの確認メッセージ</li>
-				<li>ackey:アクティベーションキー</li>
-			</ul>
-		</li>
-		<li>オプション：TemplateName:テンプレート名</li>
-	</ul>
-</p>
+<ul>
+	<li>必須：type:メッセージのタイプ
+		<ul>
+			<li>title:ウェルカムメッセージ</li>
+			<li>text:アクティベーションの確認メッセージ</li>
+			<li>ackey:アクティベーションキー</li>
+		</ul>
+	</li>
+	<li>オプション：テンプレート名</li>
+</ul>
 <h2>スキンタイプ</h2>
 <p>
 [アクティベーション]ページ
@@ -6104,19 +6098,17 @@ actionlog
 <p>formextraイベントを発生させます</p>
 <h2>引数</h2>
 <p>
-フォームのタイプ
-<ul>
-<li>activation : [アクティベーション]ページ用</li>
-<li>membermailform-notloggedin : [アカウントの新規作成]ページ用</li>
-</ul>
+イベントを発生させるページのタイプ
 </p>
+<ul>
+	<li>activation : [アクティベーション]ページ用</li>
+	<li>membermailform-notloggedin : [アカウントの新規作成]ページ用</li>
+</ul>
 <h2>スキンタイプ</h2>
-<p>
 <ul>
-<li>[アクティベーション]ページ</li>
-<li>[アカウントの新規作成]ページ</li>
+	<li>[アクティベーション]ページ</li>
+	<li>[アカウントの新規作成]ページ</li>
 </ul>
-</p>
 <h2>例</h2>
 <pre>
 &lt;%eventformextra(activation)%&gt;
@@ -6129,23 +6121,21 @@ actionlog
 <h1>管理領域用スキン変数：getblogsetting</h1>
 <p>Blogsettingsの内容を出力します</p>
 <h2>引数</h2>
-<p>
 <ul>
-<li>id:ブログのID</li>
-<li>url:ブログのURL</li>
-<li>name:ブログの名前</li>
-<li>desc:ブログの説明</li>
-<li>short:ブログの短縮名(略称) </li>
-<li>notifyaddress:通知するメールアドレス </li>
-<li>maxcomments:一覧に表示するコメントの最大数 </li>
-<li>updatefile:自動更新するファイル</li>
-<li>timeoffset:サーバ時刻との時差 </li>
+	<li>id:ブログのID</li>
+	<li>url:ブログのURL</li>
+	<li>name:ブログの名前</li>
+	<li>desc:ブログの説明</li>
+	<li>short:ブログの短縮名(略称) </li>
+	<li>notifyaddress:通知するメールアドレス </li>
+	<li>maxcomments:一覧に表示するコメントの最大数 </li>
+	<li>updatefile:自動更新するファイル</li>
+	<li>timeoffset:サーバ時刻との時差 </li>
 </ul>
-</p>
 <h2>スキンタイプ</h2>
-<p>
-[新しいblogが作成されました]ページ
-</p>
+<ul>
+	<li>[新しいblogが作成されました]ページ</li>
+</ul>
 <h2>例</h2>
 <pre>
 &lt;%getblogsetting(url)%&gt;
@@ -6158,28 +6148,26 @@ actionlog
 <h1>管理領域用スキン変数：blogsetting</h1>
 <p>Blogsettingsの内容を出力します</p>
 <h2>引数</h2>
-<p>
 <ul>
-<li>id:ブログのID</li>
-<li>url:ブログのURL</li>
-<li>name:ブログの名前</li>
-<li>desc:ブログの説明</li>
-<li>short:ブログの短縮名(略称) </li>
-<li>notifyaddress:通知するメールアドレス </li>
-<li>maxcomments:一覧に表示するコメントの最大数 </li>
-<li>updatefile:自動更新するファイル</li>
-<li>timeoffset:サーバ時刻との時差 </li>
+	<li>id:ブログのIDが出力されます</li>
+	<li>url:ブログのURLが出力されます</li>
+	<li>name:ブログの名前が出力されます</li>
+	<li>desc:ブログの説明が出力されます</li>
+	<li>short:ブログの短縮名(略称)が出力されます</li>
+	<li>notifyaddress:通知するメールアドレスが出力されます</li>
+	<li>maxcomments:一覧に表示するコメントの最大数が出力されます</li>
+	<li>updatefile:自動更新するファイル</li>
+	<li>timeoffset:サーバ時刻との時差 </li>
 </ul>
-</p>
 <h2>スキンタイプ</h2>
-<p>
-[新しいblogが作成されました]ページ
-[規制するIPアドレスの追加]ページ
-[Blog設定の編集]ページ
-[警告！ Blogを削除すると ～略～ いでください。]ページ
-[Blogのチームを管理する ]ページ
-[このblogのチームリストから削除しようとしています]ページ
-</p>
+<ul>
+	<li>[新しいblogが作成されました]ページ</li>
+	<li>[規制するIPアドレスの追加]ページ</li>
+	<li>[Blog設定の編集]ページ</li>
+	<li>[警告！ Blogを削除すると ～略～ いでください。]ページ</li>
+	<li>[Blogのチームを管理する ]ページ</li>
+	<li>[このblogのチームリストから削除しようとしています]ページ</li>
+</ul>
 <h2>例</h2>
 <pre>
 &lt;%blogsetting(url)%&gt;
@@ -6194,21 +6182,21 @@ actionlog
 <h2>引数</h2>
 <p>無し</p>
 <h2>スキンタイプ</h2>
-<p>
-[新しいblogが作成されました]ページ
-[アク禁リスト:]ページ
-[アクセス規制の解除]ページ
-[アクセス規制を解除しました]ページ
-[規制するIPアドレスの追加]ページ
-[チームメンバーに対してのバッチ操作]ページ
-[Blog設定の編集]ページ
-[次のカテゴリーを削除しようとしています: (バッチ処理)]ページ
-[カテゴリーの更新]ページ
-[警告！ Blogを削除すると ～略～ いでください。]ページ
-[コメント]ページ
-[Blogのチームを管理する ]ページ
-[このblogのチームリストから削除しようとしています]ページ
-</p>
+<ul>
+	<li>[新しいblogが作成されました]ページ</li>
+	<li>[アク禁リスト:]ページ</li>
+	<li>[アクセス規制の解除]ページ</li>
+	<li>[アクセス規制を解除しました]ページ</li>
+	<li>[規制するIPアドレスの追加]ページ</li>
+	<li>[チームメンバーに対してのバッチ操作]ページ</li>
+	<li>[Blog設定の編集]ページ</li>
+	<li>[次のカテゴリーを削除しようとしています: (バッチ処理)]ページ</li>
+	<li>[カテゴリーの更新]ページ</li>
+	<li>[警告！ Blogを削除すると ～略～ いでください。]ページ</li>
+	<li>[コメント]ページ</li>
+	<li>[Blogのチームを管理する ]ページ</li>
+	<li>[このblogのチームリストから削除しようとしています]ページ</li>
+</ul>
 <h2>例</h2>
 <pre>
 &lt;%requestblogid%&gt;
@@ -6223,10 +6211,10 @@ actionlog
 <h2>引数</h2>
 <p>無し</p>
 <h2>スキンタイプ</h2>
-<p>
-管理エリア用設定:[スキンの編集]ページ
-[スキンの編集]ページ
-</p>
+<ul>
+	<li>管理エリア用設定:[スキンの編集]ページ</li>
+	<li>[スキンの編集]ページ</li>
+</ul>
 <h2>例</h2>
 <pre>
 &lt;%skintypehelp%&gt;
@@ -6239,8 +6227,6 @@ actionlog
 <h1>管理領域用スキン変数：importskininfo</h1>
 <p>インポートしたスキン/テンプレートの情報を出力します</p>
 <h2>引数</h2>
-<p>
-タイプ
 <ul>
 	<li>info : スキンファイル中の&lt;info&gt;タグで括られた情報</li>
 	<li>snames : インポートしたスキンの名前</li>
@@ -6250,16 +6236,13 @@ actionlog
 	<li>skinfile : インポートしたスキン/テンプレートのファイル名</li>
 	<li>mode : インクルードモード</li>
 </ul>
-</p>
 <h2>スキンタイプ</h2>
-<p>
 <ul>
 	<li>管理エリア用設定:[スキンとテンプレートを読み込もうとしています]ページ</li>
 	<li>管理エリア用設定:[読み込み完了]ページ</li>
 	<li>[スキンとテンプレートを読み込もうとしています]ページ</li>
 	<li>[読み込み完了]ページ</li>
 </ul>
-</p>
 <h2>例</h2>
 <pre>
 &lt;%importskininfo(info)%&gt;
@@ -6274,15 +6257,13 @@ actionlog
 <h2>引数</h2>
 <p>テンプレート名</p>
 <h2>スキンタイプ</h2>
-<p>
-	<ul>
-		<li>[アク禁リスト:]ページ</li>
-		<li>[コメントのリスト:]ページ</li>
-		<li>[Blog設定の編集]ページ</li>
-		<li>[アイテムの追加:]ページ</li>
-		<li>[Blogアイテムの編集: ]ページ</li>
-	</ul>
-</p>
+<ul>
+	<li>[アク禁リスト:]ページ</li>
+	<li>[コメントのリスト:]ページ</li>
+	<li>[Blog設定の編集]ページ</li>
+	<li>[アイテムの追加:]ページ</li>
+	<li>[Blogアイテムの編集: ]ページ</li>
+</ul>
 <h2>例</h2>
 <pre>
 &lt;%adminbloglink(admin/default)%&gt;
@@ -6365,22 +6346,18 @@ actionlog
 <h2>引数</h2>
 <p>無し</p>
 <h2>スキンタイプ</h2>
-<p>
-	<ul>
-		<li>[カテゴリーに対してのバッチ操作]ページ</li>
-		<li>[コメントに対してのバッチ操作]ページ</li>
-		<li>[アイテムに対してのバッチ操作]ページ</li>
-		<li>[メンバーに対してのバッチ操作]ページ</li>
-		<li>[チームメンバーに対してのバッチ操作]ページ</li>
-	</ul>
-</p>
+<ul>
+	<li>[カテゴリーに対してのバッチ操作]ページ</li>
+	<li>[コメントに対してのバッチ操作]ページ</li>
+	<li>[アイテムに対してのバッチ操作]ページ</li>
+	<li>[メンバーに対してのバッチ操作]ページ</li>
+	<li>[チームメンバーに対してのバッチ操作]ページ</li>
+</ul>
 <h2>例</h2>
 <pre>
 &lt;%adminbatchaction%&gt;
 </pre>
 </div>
-
-
 <div class="page">
 <a id="adminskinvar-adminbatchlist" name="adminskinvar-adminbatchlist"></a>
 <h1>管理領域用スキン変数：adminbatchlist</h1>
@@ -6388,24 +6365,19 @@ actionlog
 <h2>引数</h2>
 <p>テンプレート名</p>
 <h2>スキンタイプ</h2>
-<p>
-	<ul>
-		<li>[カテゴリーに対してのバッチ操作]ページ</li>
-		<li>[コメントに対してのバッチ操作]ページ</li>
-		<li>[アイテムに対してのバッチ操作]ページ</li>
-		<li>[メンバーに対してのバッチ操作]ページ</li>
-		<li>[チームメンバーに対してのバッチ操作]ページ</li>
-		<li>[コメントのリスト:]ページ</li>
-	</ul>
-
-</p>
+<ul>
+	<li>[カテゴリーに対してのバッチ操作]ページ</li>
+	<li>[コメントに対してのバッチ操作]ページ</li>
+	<li>[アイテムに対してのバッチ操作]ページ</li>
+	<li>[メンバーに対してのバッチ操作]ページ</li>
+	<li>[チームメンバーに対してのバッチ操作]ページ</li>
+	<li>[コメントのリスト:]ページ</li>
+</ul>
 <h2>例</h2>
 <pre>
 &lt;%adminbatchlist(admin/default)%&gt;
 </pre>
 </div>
-
-
 <div class="page">
 <a id="adminskinvar-batchdeletetype" name="adminskinvar-batchdeletetype"></a>
 <h1>管理領域用スキン変数：batchdeletetype</h1>
@@ -6421,8 +6393,6 @@ actionlog
 &lt;%batchdeletetype%&gt;
 </pre>
 </div>
-
-
 <div class="page">
 <a id="adminskinvar-batchdeletelist" name="adminskinvar-batchdeletelist"></a>
 <h1>管理領域用スキン変数：batchdeletelist</h1>
@@ -6441,83 +6411,75 @@ actionlog
 
 
 <div class="page">
-<a id="adminskinvar-batchmovetitle" name="adminskinvar-batchmovetitle"></a>
-<h1>管理領域用スキン変数：batchmovetitle</h1>
-<p>バッチ処理で移動されたアイテムのタイトル/カテゴリを表示します</p>
-<h2>引数</h2>
-<p>無し</p>
-<h2>スキンタイプ</h2>
-<p>
+	<a id="adminskinvar-batchmovetitle" name="adminskinvar-batchmovetitle"></a>
+	<h1>管理領域用スキン変数：batchmovetitle</h1>
+	<p>バッチ処理で移動されたアイテムのタイトル/カテゴリを表示します</p>
+	<h2>引数</h2>
+	<p>無し</p>
+	<h2>スキンタイプ</h2>
 	<ul>
 		<li>[アイテムのカテゴリ移動/カテゴリのブログ移動]ページ</li>
 		<li>[カテゴリーを移動するBlogを選択してください]ページ</li>
 	</ul>
-</p>
-<h2>例</h2>
-<pre>
-&lt;%batchmovetitle%&gt;
-</pre>
+	<h2>例</h2>
+	<pre>
+	&lt;%batchmovetitle%&gt;
+	</pre>
 </div>
 
 
 <div class="page">
-<a id="adminskinvar-batchmovetype" name="adminskinvar-batchmovetype"></a>
-<h1>管理領域用スキン変数：batchmovetype</h1>
-<p>バッチ移動のタイプを表示します</p>
-<h2>引数</h2>
-<p>無し</p>
-<h2>スキンタイプ</h2>
-<p>
+	<a id="adminskinvar-batchmovetype" name="adminskinvar-batchmovetype"></a>
+	<h1>管理領域用スキン変数：batchmovetype</h1>
+	<p>バッチ移動のタイプを表示します</p>
+	<h2>引数</h2>
+	<p>無し</p>
+	<h2>スキンタイプ</h2>
 	<ul>
 		<li>[アイテムのカテゴリ移動/カテゴリのブログ移動]ページ</li>
 		<li>[カテゴリーを移動するBlogを選択してください]ページ</li>
 	</ul>
-</p>
-<h2>例</h2>
-<pre>
-&lt;%batchmovetype%&gt;
-</pre>
+	<h2>例</h2>
+	<pre>
+	&lt;%batchmovetype%&gt;
+	</pre>
 </div>
 
 
 <div class="page">
-<a id="adminskinvar-batchmovelist" name="adminskinvar-batchmovelist"></a>
-<h1>管理領域用スキン変数：batchmovelist</h1>
-<p>バッチ処理で移動されたアイテム/カテゴリのリストを表示します</p>
-<h2>引数</h2>
-<p>無し</p>
-<h2>スキンタイプ</h2>
-<p>
+	<a id="adminskinvar-batchmovelist" name="adminskinvar-batchmovelist"></a>
+	<h1>管理領域用スキン変数：batchmovelist</h1>
+	<p>バッチ処理で移動されたアイテム/カテゴリのリストを表示します</p>
+	<h2>引数</h2>
+	<p>無し</p>
+	<h2>スキンタイプ</h2>
 	<ul>
 		<li>[アイテムのカテゴリ移動/カテゴリのブログ移動]ページ</li>
 		<li>[カテゴリーを移動するBlogを選択してください]ページ</li>
 	</ul>
-</p>
-<h2>例</h2>
-<pre>
-&lt;%batchmovelist%&gt;
-</pre>
+	<h2>例</h2>
+	<pre>
+	&lt;%batchmovelist%&gt;
+	</pre>
 </div>
 
 
 <div class="page">
-<a id="adminskinvar-movedistselect" name="adminskinvar-movedistselect"></a>
-<h1>管理領域用スキン変数：movedistselect</h1>
-<p>バッチ移動の移動先を表示します</p>
-<h2>引数</h2>
-<p>無し</p>
-<h2>スキンタイプ</h2>
-<p>
+	<a id="adminskinvar-movedistselect" name="adminskinvar-movedistselect"></a>
+	<h1>管理領域用スキン変数：movedistselect</h1>
+	<p>バッチ移動の移動先を表示します</p>
+	<h2>引数</h2>
+	<p>無し</p>
+	<h2>スキンタイプ</h2>
 	<ul>
 		<li>[アイテムのカテゴリ移動/カテゴリのブログ移動]ページ</li>
 		<li>[カテゴリーを移動するBlogを選択してください]ページ</li>
 		<li>[どのBlogに移動しますか？]ページ</li>
 	</ul>
-</p>
-<h2>例</h2>
-<pre>
-&lt;%movedistselect%&gt;
-</pre>
+	<h2>例</h2>
+	<pre>
+	&lt;%movedistselect%&gt;
+	</pre>
 </div>
 
 
@@ -6528,12 +6490,10 @@ actionlog
 <h2>引数</h2>
 <p>無し</p>
 <h2>スキンタイプ</h2>
-<p>
-	<ul>
-		<li>[アイテムのカテゴリ移動/カテゴリのブログ移動]ページ</li>
-		<li>[カテゴリーを移動するBlogを選択してください]ページ</li>
-	</ul>
-</p>
+<ul>
+	<li>[アイテムのカテゴリ移動/カテゴリのブログ移動]ページ</li>
+	<li>[カテゴリーを移動するBlogを選択してください]ページ</li>
+</ul>
 <h2>例</h2>
 <pre>
 &lt;%batchmovebtn%&gt;
@@ -6548,13 +6508,11 @@ actionlog
 <h2>引数</h2>
 <p>無し</p>
 <h2>スキンタイプ</h2>
-<p>
-	<ul>
-		<li>[コメントのリスト:]ページ</li>
-		<li>[あなたのコメント]ページ</li>
-		<li>[コメント]ページ/li>
-	</ul>
-</p>
+<ul>
+	<li>[コメントのリスト:]ページ</li>
+	<li>[あなたのコメント]ページ</li>
+	<li>[コメント]ページ/</li>
+</ul>
 <h2>例</h2>
 <pre>
 &lt;%commentnavlist%&gt;
@@ -6643,12 +6601,10 @@ actionlog
 </ul>
 <p>引数をすべて省略した場合は現在のサーバ時刻が出力される。</p>
 <h2>スキンタイプ</h2>
-<p>
-	<ul>
-		<li>[Blog設定の編集]ページ</li>
-		<li>[新しいBlogの作成]ページ</li>
-	</ul>
-</p>
+<ul>
+	<li>[Blog設定の編集]ページ</li>
+	<li>[新しいBlogの作成]ページ</li>
+</ul>
 <h2>例</h2>
 <pre>
 &lt;%blogtime(blogtime,"%H:%M")%&gt;
@@ -6683,13 +6639,11 @@ actionlog
 	<li>テンプレート名</li>
 </ul>
 <h2>スキンタイプ</h2>
-<p>
-	<ul>
-		<li>[Blog設定の編集]ページ</li>
-		<li>[新しいBlogの作成]ページ</li>
-		<li>[グローバル設定]ページ</li>
-	</ul>
-</p>
+<ul>
+	<li>[Blog設定の編集]ページ</li>
+	<li>[新しいBlogの作成]ページ</li>
+	<li>[グローバル設定]ページ</li>
+</ul>
 <h2>例</h2>
 <pre>
 &lt;%defskinselect(blog,admin/default)%&gt;
@@ -6704,15 +6658,13 @@ actionlog
 <h2>引数</h2>
 <p>イベントを発生させるページのタイプ</p>
 <h2>スキンタイプ</h2>
-<p>
-	<ul>
-		<li>[Blog設定の編集]ページ</li>
-		<li>[アカウントの新規作成]ページ</li>
-		<li>[アイテムの追加:]ページ</li>
-		<li>[アイテムの編集]ページ</li>
-		<li>[グローバル設定]ページ</li>
-	</ul>
-</p>
+<ul>
+	<li>[Blog設定の編集]ページ</li>
+	<li>[アカウントの新規作成]ページ</li>
+	<li>[アイテムの追加:]ページ</li>
+	<li>[アイテムの編集]ページ</li>
+	<li>[グローバル設定]ページ</li>
+</ul>
 <h2>例</h2>
 <pre>
 &lt;%pluginextras(blog)%&gt;
@@ -6731,15 +6683,13 @@ actionlog
 </ul>
 <p>context(global or member or blog or category or item),templateName</p>
 <h2>スキンタイプ</h2>
-<p>
-	<ul>
-		<li>[Blog設定の編集]ページ</li>
-		<li>[カテゴリーの更新]ページ</li>
-		<li>[アイテムの追加:]ページ</li>
-		<li>[メンバーの編集]ページ</li>
-		<li>[アイテムの編集]ページ</li>
-	</ul>
-</p>
+<ul>
+	<li>[Blog設定の編集]ページ</li>
+	<li>[カテゴリーの更新]ページ</li>
+	<li>[アイテムの追加:]ページ</li>
+	<li>[メンバーの編集]ページ</li>
+	<li>[アイテムの編集]ページ</li>
+</ul>
 <h2>例</h2>
 <pre>
 &lt;%pluginoptions(blog,admin/default)%&gt;
@@ -6789,12 +6739,10 @@ actionlog
 <h2>引数</h2>
 <p>出力するタイプ(「name」もしくは空欄)</p>
 <h2>スキンタイプ</h2>
-<p>
-	<ul>
-		<li>[次のカテゴリーを削除しようとしています: (バッチ処理)]ページ</li>
-		<li>[カテゴリーの更新]ページ</li>
-	</ul>
-</p>
+<ul>
+	<li>[次のカテゴリーを削除しようとしています: (バッチ処理)]ページ</li>
+	<li>[カテゴリーの更新]ページ</li>
+</ul>
 <h2>例</h2>
 <pre>
 &lt;%categorysetting(name)%&gt;
@@ -6805,12 +6753,17 @@ actionlog
 <div class="page">
 <a id="adminskinvar-editdesturl" name="adminskinvar-editdesturl"></a>
 <h1>管理領域用スキン変数：editdesturl</h1>
-<p>URL which indicates a list of the back items to which the category was changed</p>
+<p>
+記事の投稿時に、カテゴリの選択で「新しいカテゴリーを追加...」<br />
+を選択した場合、次の「[カテゴリーの更新]ページ」でカテゴリ名や<br />
+説明を入力した後にリダイレクトされる「[Blogアイテムの編集: ]ページ」<br />
+のURLを出力します。
+</p>
 <h2>引数</h2>
 <p>無し</p>
 <h2>スキンタイプ</h2>
 <p>
-categoryedit
+[カテゴリーの更新]ページ
 </p>
 <h2>例</h2>
 <pre>
@@ -6822,12 +6775,12 @@ categoryedit
 <div class="page">
 <a id="adminskinvar-deletecomment" name="adminskinvar-deletecomment"></a>
 <h1>管理領域用スキン変数：deletecomment</h1>
-<p>Information on an eliminated comment is output.</p>
+<p>削除されるコメントの情報を出力します</p>
 <h2>引数</h2>
-<p>Type(id or author or body)</p>
+<p>出力する情報のタイプ(「コメントID(id)」、「コメントの著者(author)」、「コメント本文(body)」のどれか</p>
 <h2>スキンタイプ</h2>
 <p>
-commentdelete
+[以下のコメントを削除しようとしています:(バッチ処理)]ページ
 </p>
 <h2>例</h2>
 <pre>
@@ -6839,12 +6792,16 @@ commentdelete
 <div class="page">
 <a id="adminskinvar-editcomment" name="adminskinvar-editcomment"></a>
 <h1>管理領域用スキン変数：editcomment</h1>
-<p>Information on the comment which is being edited is output.</p>
+<p>編集中のコメントの情報を出力します</p>
 <h2>引数</h2>
-<p>Type(id or user or date or body or cmail or url or other)</p>
+<p>
+出力する情報のタイプ(「コメントID(id)」、「コメントの著者(user)」、「コメントの日付(date)」、<br />
+「コメント本文(body)」、「メールアドレス(cmail)」、「URL(url)」、<br />
+その他commentテーブルのラベルのどれか
+</p>
 <h2>スキンタイプ</h2>
 <p>
-commentedit
+[コメントの編集]ページ
 </p>
 <h2>例</h2>
 <pre>
@@ -6856,18 +6813,16 @@ commentedit
 <div class="page">
 <a id="adminskinvar-contents" name="adminskinvar-contents"></a>
 <h1>管理領域用スキン変数：contents</h1>
-<p>Information on the item which is being edited newly and or is output.</p>
+<p>入力用のinputボックスのvalueの内容を出力します。</p>
 <h2>引数</h2>
-<p>which(part for item)</p>
+<p>出力する項目</p>
 <h2>スキンタイプ</h2>
-<p>
-	<ul>
-		<li>createaccountinput</li>
-		<li>createaccountsuccess</li>
-		<li>createitem</li>
-		<li>itemedit</li>
-	</ul>
-</p>
+<ul>
+	<li>[アカウントの新規作成]ページ</li>
+	<li>[アカウントの作成]ページ</li>
+	<li>[アイテムの追加:]ページ</li>
+	<li>[アイテムの編集]ページ</li>
+</ul>
 <h2>例</h2>
 <pre>
 &lt;%contents(title)%&gt;
@@ -6878,12 +6833,12 @@ commentedit
 <div class="page">
 <a id="adminskinvar-blogid" name="adminskinvar-blogid"></a>
 <h1>管理領域用スキン変数：blogid</h1>
-<p>The ID for the requested blog is output in $_REQUEST.</p>
+<p>$_REQUEST変数に格納されているブログIDを出力します。</p>
 <h2>引数</h2>
 <p>無し</p>
 <h2>スキンタイプ</h2>
 <p>
-createitem
+[アイテムの追加:]ページ
 </p>
 <h2>例</h2>
 <pre>
@@ -6895,16 +6850,14 @@ createitem
 <div class="page">
 <a id="adminskinvar-categories" name="adminskinvar-categories"></a>
 <h1>管理領域用スキン変数：categories</h1>
-<p>An item outputs the selection box from which the category to which I belong is chosen.</p>
+<p>編集中の記事が所属するカテゴリーが選択された状態のセレクトボックスを出力します。</p>
 <h2>引数</h2>
 <p>startidx</p>
 <h2>スキンタイプ</h2>
-<p>
-	<ul>
-		<li>createitem</li>
-		<li>itemedit</li>
-	</ul>
-</p>
+<ul>
+	<li>[アイテムの追加:]ページ</li>
+	<li>[アイテムの編集]ページ</li>
+</ul>
 <h2>例</h2>
 <pre>
 &lt;%categories(40)%&gt;
@@ -6915,66 +6868,62 @@ createitem
 <div class="page">
 <a id="adminskinvar-currenttime" name="adminskinvar-currenttime"></a>
 <h1>管理領域用スキン変数：currenttime</h1>
-<p>The present time based on the setting of a blog is output.</p>
+<p>[Blog設定の編集]ページ」で設定したサーバ時刻との時差に基づいて、現在のBlog時刻を出力します</p>
 <h2>引数</h2>
-<p>
-   <table>
-      <tr>
-       <td><em>&quot;seconds&quot;</em></td>
-       <td>Numeric representation of seconds</td>
-      </tr>
-      <tr>
-       <td><em>&quot;minutes&quot;</em></td>
-       <td>Numeric representation of minutes</td>
-      </tr>
-      <tr>
-       <td><em>&quot;hours&quot;</em></td>
-       <td>Numeric representation of hours</td>
-      </tr>
-      <tr>
-       <td><em>&quot;mday&quot;</em></td>
-       <td>Numeric representation of the day of the month</td>
-      </tr>
-      <tr>
-       <td><em>&quot;wday&quot;</em></td>
-       <td>Numeric representation of the day of the week</td>
-      </tr>
-      <tr>
-       <td><em>&quot;mon&quot;</em></td>
-       <td>Numeric representation of a month</td>
-      </tr>
-      <tr>
-       <td><em>&quot;year&quot;</em></td>
-       <td>A full numeric representation of a year, 4 digits</td>
-      </tr>
-      <tr>
-       <td><em>&quot;yday&quot;</em></td>
-       <td>Numeric representation of the day of the year</td>
-     </tr>
-      <tr>
-       <td><em>&quot;weekday&quot;</em></td>
-       <td>A full textual representation of the day of the week</td>
-      </tr>
-      <tr>
-       <td><em>&quot;month&quot;</em></td>
-       <td>A full textual representation of a month, such as January or March</td>
-      </tr>
-      <tr>
-       <td><em>0</em></td>
-       <td>
-        Seconds since the Unix Epoch, similar to the values returned by
-        <span class="function"><a href="function.time.php" class="function">time()</a></span> and used by <span class="function"><a href="function.date.php" class="function">date()</a></span>.
-       </td>
-      </tr>
-   </table>
-</p>
+<table>
+	<tr>
+		<td><em>&quot;seconds&quot;</em></td>
+		<td>秒。数値。0 から 59</td>
+	</tr>
+	<tr>
+		<td><em>&quot;minutes&quot;</em></td>
+		<td>分。数値。0 から 59</td>
+	</tr>
+	<tr>
+		<td><em>&quot;hours&quot;</em></td>
+		<td>時。数値。0 から 23</td>
+	</tr>
+	<tr>
+		<td><em>&quot;mday&quot;</em></td>
+		<td>月単位の日。数値。1 から 31</td>
+	</tr>
+	<tr>
+		<td><em>&quot;wday&quot;</em></td>
+		<td>曜日。数値。0 (日曜) から 6 (土曜)</td>
+	</tr>
+	<tr>
+		<td><em>&quot;mon&quot;</em></td>
+		<td>月。数値。1 から 12</td>
+	</tr>
+	<tr>
+		<td><em>&quot;year&quot;</em></td>
+		<td>年。4桁の数値。例: 1999 あるいは 2003</td>
+	</tr>
+	<tr>
+		<td><em>&quot;yday&quot;</em></td>
+		<td>年単位の日。数値。0 から 365</td>
+	</tr>
+	<tr>
+		<td><em>&quot;weekday&quot;</em></td>
+		<td>曜日。フルスペルの文字。Sunday から Saturday</td>
+	</tr>
+	<tr>
+		<td><em>&quot;month&quot;</em></td>
+		<td>月。フルスペルの文字。January から December</td>
+	</tr>
+	<tr>
+		<td><em>0</em></td>
+		<td>
+			UNIX時（1970年1月1日）からの秒数。
+			<span class="function"><a href="http://jp1.php.net/manual/ja/function.time.php" class="function">time()</a></span>の戻り値と同様。<span class="function"><a href="http://jp1.php.net/manual/ja/function.date.php" class="function">date()</a>でも使用される。	システムによって違うが、通常は-2147483648 から 2147483647。</span>.
+		</td>
+	</tr>
+</table>
 <h2>スキンタイプ</h2>
-<p>
-	<ul>
-		<li>createitem</li>
-		<li>itemedit</li>
-	</ul>
-</p>
+<ul>
+	<li>createitem</li>
+	<li>itemedit</li>
+</ul>
 <h2>例</h2>
 <pre>
 &lt;%currenttime(month)%&gt;
@@ -6985,16 +6934,14 @@ createitem
 <div class="page">
 <a id="adminskinvar-init" name="adminskinvar-init"></a>
 <h1>管理領域用スキン変数：init</h1>
-<p>Initialization of contribution or edit processing of an item.</p>
+<p>投稿中、または編集中の記事を初期化します。</p>
 <h2>引数</h2>
 <p>無し</p>
 <h2>スキンタイプ</h2>
-<p>
-	<ul>
-		<li>createitem</li>
-		<li>itemedit</li>
-	</ul>
-</p>
+<ul>
+	<li>[アイテムの追加:]ページ</li>
+	<li>[アイテムの編集]ページ</li>
+</ul>
 <h2>例</h2>
 <pre>
 &lt;%init%&gt;
@@ -7005,17 +6952,32 @@ createitem
 <div class="page">
 <a id="adminskinvar-editmember" name="adminskinvar-editmember"></a>
 <h1>管理領域用スキン変数：editmember</h1>
-<p>The setting form of the editing member is output.</p>
+<p>設定を編集中のメンバーの情報を出力します。</p>
 <h2>引数</h2>
+<ul>
+	<li>
+		出力する情報のタイプ(次のうちどれか)
+		<ul>
+			<li>メンバーID(id)</li>
+			<li>表示される名前(ログインID)(displayname)</li>
+			<li>ハンドルネーム(realname)</li>
+			<li>メールアドレス(email)</li>
+			<li>Web siteアドレス (URL)(url)</li>
+			<li>Super-admin(最高管理)権限を与える(admin)</li>
+			<li>管理者領域へのログインを可能にする(canlogin)</li>
+			<li>備考(notes)</li>
+			<li>下書きの自動保存機能を有効にする(autosave)</li>
+		</ul>
+	</li>
+	<li>テンプレート名</li>
+</ul>
 <p>type(id or displayname or realname or email or url or admin or canlogin or notes or autosave),templateName</p>
 <h2>スキンタイプ</h2>
-<p>
-	<ul>
-		<li>editmembersettings</li>
-		<li>memberdelete</li>
-		<li>teamdelete</li>
-	</ul>
-</p>
+<ul>
+	<li>[メンバーの編集]ページ</li>
+	<li>[以下のメンバープロファイルを削除しようとしています: ]ページ</li>
+	<li>[このblogのチームリストから削除しようとしています]ページ</li>
+</ul>
 <h2>例</h2>
 <pre>
 &lt;%editmember(url,admin/default)%&gt;
@@ -7030,12 +6992,10 @@ createitem
 <h2>引数</h2>
 <p>無し</p>
 <h2>スキンタイプ</h2>
-<p>
-	<ul>
-		<li>editmembersettings</li>
-		<li>settingsedit</li>
-	</ul>
-</p>
+<ul>
+	<li>[メンバーの編集]ページ</li>
+	<li>[グローバル設定]ページ</li>
+</ul>
 <h2>例</h2>
 <pre>
 &lt;%localeselectoptions%&gt;
