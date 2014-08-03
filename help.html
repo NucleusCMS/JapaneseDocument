@@ -6988,7 +6988,7 @@ actionlog
 <div class="page">
 <a id="adminskinvar-localeselectoptions" name="adminskinvar-localeselectoptions"></a>
 <h1>管理領域用スキン変数：localeselectoptions</h1>
-<p>The options for select box from which a locale is chosen is output.</p>
+<p>ロケール選択のためのセレクトボックスを出力します</p>
 <h2>引数</h2>
 <p>無し</p>
 <h2>スキンタイプ</h2>
@@ -7006,13 +7006,13 @@ actionlog
 <div class="page">
 <a id="adminskinvar-deleteitemtitle" name="adminskinvar-deleteitemtitle"></a>
 <h1>管理領域用スキン変数：deleteitemtitle</h1>
-<p>The title of the deleted item is indicated.</p>
+<p>削除される記事のタイトルを出力します</p>
 <h2>引数</h2>
 <p>無し</p>
 <h2>スキンタイプ</h2>
-<p>
-itemdelete
-</p>
+<ul>
+	<li>[以下のアイテムを削除しようとしています:]ページ</li>
+</ul>
 <h2>例</h2>
 <pre>
 &lt;%deleteitemtitle%&gt;
@@ -7023,13 +7023,13 @@ itemdelete
 <div class="page">
 <a id="adminskinvar-deleteitembody" name="adminskinvar-deleteitembody"></a>
 <h1>管理領域用スキン変数：deleteitembody</h1>
-<p>The body of the deleted item is indicated.</p>
+<p>削除される記事の本文を出力します</p>
 <h2>引数</h2>
 <p>無し</p>
 <h2>スキンタイプ</h2>
-<p>
-itemdelete
-</p>
+<ul>
+	<li>[以下のアイテムを削除しようとしています:]ページ</li>
+</ul>
 <h2>例</h2>
 <pre>
 &lt;%deleteitembody%&gt;
@@ -7040,13 +7040,13 @@ itemdelete
 <div class="page">
 <a id="adminskinvar-deleteitemid" name="adminskinvar-deleteitemid"></a>
 <h1>管理領域用スキン変数：deleteitemid</h1>
-<p>The ID of the deleted item is indicated.</p>
+<p>削除される記事のIDを出力します</p>
 <h2>引数</h2>
 <p>無し</p>
 <h2>スキンタイプ</h2>
-<p>
-itemdelete
-</p>
+<ul>
+	<li>[以下のアイテムを削除しようとしています:]ページ</li>
+</ul>
 <h2>例</h2>
 <pre>
 &lt;%deleteitemid%&gt;
@@ -7057,13 +7057,13 @@ itemdelete
 <div class="page">
 <a id="adminskinvar-checkedonval" name="adminskinvar-checkedonval"></a>
 <h1>管理領域用スキン変数：checkedonval</h1>
-<p>Property name of an item lays with value and puts a check in.</p>
+<p>radioタイプなどのinputタグの中に記述することで、編集中の記事の「名前」の「値」を引数の「名前」の「値」と比較して「checked="checked"」を出力します</p>
 <h2>引数</h2>
-<p>value,name</p>
+<p>「値」,「名前」</p>
 <h2>スキンタイプ</h2>
-<p>
-itemedit
-</p>
+<ul>
+	<li>[アイテムの編集]ページ</li>
+</ul>
 <h2>例</h2>
 <pre>
 &lt;%checkedonval(1,closed)%&gt;
@@ -7074,63 +7074,61 @@ itemedit
 <div class="page">
 <a id="adminskinvar-itemtime" name="adminskinvar-itemtime"></a>
 <h1>管理領域用スキン変数：itemtime</h1>
-<p>The contribution time of the item is output.</p>
+<p>[Blog設定の編集]ページ」で設定したサーバ時刻との時差に基づいて、記事の投稿された時刻を出力します</p>
 <h2>引数</h2>
-<p>
-   <table>
-      <tr>
-       <td><em>&quot;seconds&quot;</em></td>
-       <td>Numeric representation of seconds</td>
-      </tr>
-      <tr>
-       <td><em>&quot;minutes&quot;</em></td>
-       <td>Numeric representation of minutes</td>
-      </tr>
-      <tr>
-       <td><em>&quot;hours&quot;</em></td>
-       <td>Numeric representation of hours</td>
-      </tr>
-      <tr>
-       <td><em>&quot;mday&quot;</em></td>
-       <td>Numeric representation of the day of the month</td>
-      </tr>
-      <tr>
-       <td><em>&quot;wday&quot;</em></td>
-       <td>Numeric representation of the day of the week</td>
-      </tr>
-      <tr>
-       <td><em>&quot;mon&quot;</em></td>
-       <td>Numeric representation of a month</td>
-      </tr>
-      <tr>
-       <td><em>&quot;year&quot;</em></td>
-       <td>A full numeric representation of a year, 4 digits</td>
-      </tr>
-      <tr>
-       <td><em>&quot;yday&quot;</em></td>
-       <td>Numeric representation of the day of the year</td>
-     </tr>
-      <tr>
-       <td><em>&quot;weekday&quot;</em></td>
-       <td>A full textual representation of the day of the week</td>
-      </tr>
-      <tr>
-       <td><em>&quot;month&quot;</em></td>
-       <td>A full textual representation of a month, such as January or March</td>
-      </tr>
-      <tr>
-       <td><em>0</em></td>
-       <td>
-        Seconds since the Unix Epoch, similar to the values returned by
-        <span class="function"><a href="function.time.php" class="function">time()</a></span> and used by <span class="function"><a href="function.date.php" class="function">date()</a></span>.
-       </td>
-      </tr>
-   </table>
-</p>
+<table>
+	<tr>
+		<td><em>&quot;seconds&quot;</em></td>
+		<td>秒。数値。0 から 59</td>
+	</tr>
+	<tr>
+		<td><em>&quot;minutes&quot;</em></td>
+		<td>分。数値。0 から 59</td>
+	</tr>
+	<tr>
+		<td><em>&quot;hours&quot;</em></td>
+		<td>時。数値。0 から 23</td>
+	</tr>
+	<tr>
+		<td><em>&quot;mday&quot;</em></td>
+		<td>月単位の日。数値。1 から 31</td>
+	</tr>
+	<tr>
+		<td><em>&quot;wday&quot;</em></td>
+		<td>曜日。数値。0 (日曜) から 6 (土曜)</td>
+	</tr>
+	<tr>
+		<td><em>&quot;mon&quot;</em></td>
+		<td>月。数値。1 から 12</td>
+	</tr>
+	<tr>
+		<td><em>&quot;year&quot;</em></td>
+		<td>年。4桁の数値。例: 1999 あるいは 2003</td>
+	</tr>
+	<tr>
+		<td><em>&quot;yday&quot;</em></td>
+		<td>年単位の日。数値。0 から 365</td>
+	</tr>
+	<tr>
+		<td><em>&quot;weekday&quot;</em></td>
+		<td>曜日。フルスペルの文字。Sunday から Saturday</td>
+	</tr>
+	<tr>
+		<td><em>&quot;month&quot;</em></td>
+		<td>月。フルスペルの文字。January から December</td>
+	</tr>
+	<tr>
+		<td><em>0</em></td>
+		<td>
+			UNIX時（1970年1月1日）からの秒数。
+			<span class="function"><a href="http://jp1.php.net/manual/ja/function.time.php" class="function">time()</a></span>の戻り値と同様。<span class="function"><a href="http://jp1.php.net/manual/ja/function.date.php" class="function">date()</a>でも使用される。	システムによって違うが、通常は-2147483648 から 2147483647。</span>.
+		</td>
+	</tr>
+</table>
 <h2>スキンタイプ</h2>
-<p>
-itemedit
-</p>
+<ul>
+	<li>[アイテムの編集]ページ</li>
+</ul>
 <h2>例</h2>
 <pre>
 &lt;%itemtime(mday)%&gt;
@@ -7141,13 +7139,13 @@ itemedit
 <div class="page">
 <a id="adminskinvar-ilistaddnew" name="adminskinvar-ilistaddnew"></a>
 <h1>管理領域用スキン変数：ilistaddnew</h1>
-<p>A link to a new contribution screen of an item is output.</p>
+<p>新しい記事の投稿画面へのリンクが出力されます</p>
 <h2>引数</h2>
 <p>無し</p>
 <h2>スキンタイプ</h2>
-<p>
-itemlist
-</p>
+<ul>
+	<li>[Blogアイテムの編集: ]ページ</li>
+</ul>
 <h2>例</h2>
 <pre>
 &lt;%ilistaddnew%&gt;
@@ -7158,13 +7156,13 @@ itemlist
 <div class="page">
 <a id="adminskinvar-moveitemid" name="adminskinvar-moveitemid"></a>
 <h1>管理領域用スキン変数：moveitemid</h1>
-<p>The ID for the item I move is output.</p>
+<p>移動する記事のIDが出力されます</p>
 <h2>引数</h2>
 <p>無し</p>
 <h2>スキンタイプ</h2>
-<p>
-itemmove
-</p>
+<ul>
+	<li>[どのBlogに移動しますか？]ページ</li>
+</ul>
 <h2>例</h2>
 <pre>
 &lt;%moveitemid%&gt;
@@ -7175,13 +7173,13 @@ itemmove
 <div class="page">
 <a id="adminskinvar-blogteamlist" name="adminskinvar-blogteamlist"></a>
 <h1>管理領域用スキン変数：blogteamlist</h1>
-<p>A list of the members who can contribute to a blog is output.</p>
+<p>ブログのメンバーのリストが出力されます</p>
 <h2>引数</h2>
-<p>templateName</p>
+<p>テンプレート名</p>
 <h2>スキンタイプ</h2>
-<p>
-manageteam
-</p>
+<ul>
+	<li>[Blogのチームを管理する ]ページ</li>
+</ul>
 <h2>例</h2>
 <pre>
 &lt;%blogteamlist(admin/default)%&gt;
@@ -7192,13 +7190,13 @@ manageteam
 <div class="page">
 <a id="adminskinvar-newmemberselect" name="adminskinvar-newmemberselect"></a>
 <h1>管理領域用スキン変数：newmemberselect</h1>
-<p>A select box of the new member who seasons the team which can contribute to a blog is output.</p>
+<p>新たにブログチームに加えるメンバーを選ぶセレクトボックスを出力します</p>
 <h2>引数</h2>
-<p>templateName</p>
+<p>テンプレート名</p>
 <h2>スキンタイプ</h2>
-<p>
-manageteam
-</p>
+<ul>
+	<li>[Blogのチームを管理する ]ページ</li>
+</ul>
 <h2>例</h2>
 <pre>
 &lt;%newmemberselect(admin/default)%&gt;
@@ -7209,16 +7207,34 @@ manageteam
 <div class="page">
 <a id="adminskinvar-inputyesno" name="adminskinvar-inputyesno"></a>
 <h1>管理領域用スキン変数：inputyesno</h1>
-<p>The form of the question answered at yes or no is output.</p>
+<p>「はい」「いいえ」の2択のinputタグを出力します</p>
 <h2>引数</h2>
-<p>name,checkedval(value of the one value1 and value2 check),tabindex,value1,value2,yesval(label for value1),noval(label for value2),isAdmin,templateName</p>
+<ul>
+	<li>
+		必須
+		<ul>
+			<li>選択する項目名</li>
+			<li>選択状態になっている項目(「1」または「2」)</li>
+			<li>タブインデックス</li>
+		</ul>
+	</li>
+	<li>
+		オプション
+		<ul>
+			<li>項目1の値</li>
+			<li>項目2の値</li>
+			<li>項目1に表示する文字列</li>
+			<li>項目2に表示する文字列</li>
+			<li>isAdmin</li>
+			<li>テンプレート名</li>
+		</ul>
+	</li>
+</ul>
 <h2>スキンタイプ</h2>
-<p>
-	<ul>
-		<li>manageteam</li>
-		<li>usermanagement</li>
-	</ul>
-</p>
+<ul>
+	<li>[Blogのチームを管理する ]ページ</li>
+	<li>[メンバーの管理]ページ</li>
+</ul>
 <h2>例</h2>
 <pre>
 &lt;%inputyesno(canlogin,1,10070)%&gt;
@@ -7229,13 +7245,13 @@ manageteam
 <div class="page">
 <a id="adminskinvar-yrbloglist" name="adminskinvar-yrbloglist"></a>
 <h1>管理領域用スキン変数：yrbloglist</h1>
-<p>A list of the blogs which are being managed is output.</p>
+<p>管理権限を持っているブログのリストを出力します</p>
 <h2>引数</h2>
-<p>templateName</p>
+<p>テンプレート名</p>
 <h2>スキンタイプ</h2>
-<p>
-overview
-</p>
+<ul>
+	<li>[管理ホーム]ページ</li>
+</ul>
 <h2>例</h2>
 <pre>
 &lt;%yrbloglist(admin/default)%&gt;
@@ -7246,16 +7262,14 @@ overview
 <div class="page">
 <a id="adminskinvar-editpluginfo" name="adminskinvar-editpluginfo"></a>
 <h1>管理領域用スキン変数：editpluginfo</h1>
-<p>Information on the plugin which is being edited is output.</p>
+<p>設定中のプラグインの情報を出力します</p>
 <h2>引数</h2>
-<p>Type(id or name)</p>
+<p>出力する情報のタイプ(「ID］または「name」)</p>
 <h2>スキンタイプ</h2>
-<p>
-	<ul>
-		<li>plugindelete</li>
-		<li>pluginoptions</li>
-	</ul>
-</p>
+<ul>
+	<li>[このプラグインを削除しますか？]ページ</li>
+	<li>[プラグイン のオプション設定]ページ</li>
+</ul>
 <h2>例</h2>
 <pre>
 &lt;%editpluginfo(name)%&gt;
@@ -7266,13 +7280,13 @@ overview
 <div class="page">
 <a id="adminskinvar-helpplugname" name="adminskinvar-helpplugname"></a>
 <h1>管理領域用スキン変数：helpplugname</h1>
-<p>The name of plugin indicating help is output.</p>
+<p>ヘルプを表示中のプラグインの名前を出力します</p>
 <h2>引数</h2>
 <p>無し</p>
 <h2>スキンタイプ</h2>
-<p>
-pluginhelp
-</p>
+<ul>
+	<li>[プラグインのヘルプページ]ページ</li>
+</ul>
 <h2>例</h2>
 <pre>
 &lt;%helpplugname%&gt;
@@ -7283,13 +7297,13 @@ pluginhelp
 <div class="page">
 <a id="adminskinvar-pluginhelp" name="adminskinvar-pluginhelp"></a>
 <h1>管理領域用スキン変数：pluginhelp</h1>
-<p>help in plugin is output.</p>
+<p>プラグインのヘルプを出力します</p>
 <h2>引数</h2>
 <p>無し</p>
 <h2>スキンタイプ</h2>
-<p>
-pluginhelp
-</p>
+<ul>
+	<li>[プラグインのヘルプページ]ページ</li>
+</ul>
 <h2>例</h2>
 <pre>
 &lt;%pluginhelp%&gt;
@@ -7300,13 +7314,13 @@ pluginhelp
 <div class="page">
 <a id="adminskinvar-pluginlistlist" name="adminskinvar-pluginlistlist"></a>
 <h1>管理領域用スキン変数：pluginlistlist</h1>
-<p>A list of plugin is output.</p>
+<p>プラグインの一覧を出力します</p>
 <h2>引数</h2>
-<p>templateName</p>
+<p>テンプレート名</p>
 <h2>スキンタイプ</h2>
-<p>
-pluginlist
-</p>
+<ul>
+	<li>[プラグインの管理]ページ</li>
+</ul>
 <h2>例</h2>
 <pre>
 &lt;%pluginlistlist(admin/default)%&gt;
@@ -7317,13 +7331,13 @@ pluginlist
 <div class="page">
 <a id="adminskinvar-newpluginlist" name="adminskinvar-newpluginlist"></a>
 <h1>管理領域用スキン変数：newpluginlist</h1>
-<p>Option tags of a select box of plugins of non-installation are output.</p>
+<p>新しくプラグインをインストールするための、「plugins」ディレクトリに存在する、インストールされていないプラグインを選択するためのセレクトボックスを出力します</p>
 <h2>引数</h2>
 <p>無し</p>
 <h2>スキンタイプ</h2>
-<p>
-pluginlist
-</p>
+<ul>
+	<li>[プラグインの管理]ページ</li>
+</ul>
 <h2>例</h2>
 <pre>
 &lt;%newpluginlist%&gt;
@@ -7334,13 +7348,13 @@ pluginlist
 <div class="page">
 <a id="adminskinvar-editplugoptionslist" name="adminskinvar-editplugoptionslist"></a>
 <h1>管理領域用スキン変数：editplugoptionslist</h1>
-<p>Plugin options are output.</p>
+<p>プラグインオプションを出力します</p>
 <h2>引数</h2>
-<p>templateName</p>
+<p>テンプレート名</p>
 <h2>スキンタイプ</h2>
-<p>
-pluginoptions
-</p>
+<ul>
+	<li>[プラグイン のオプション設定]ページ</li>
+</ul>
 <h2>例</h2>
 <pre>
 &lt;%editplugoptionslist(admin/default)%&gt;
@@ -7351,13 +7365,13 @@ pluginoptions
 <div class="page">
 <a id="adminskinvar-defblogselect" name="adminskinvar-defblogselect"></a>
 <h1>管理領域用スキン変数：defblogselect</h1>
-<p>The select box from which blog in default is chosen is output.</p>
+<p>標準の「ブログ」を選択するためのセレクトボックスを出力します</p>
 <h2>引数</h2>
-<p>templateName</p>
+<p>テンプレート名</p>
 <h2>スキンタイプ</h2>
-<p>
-settingsedit
-</p>
+<ul>
+	<li>[グローバル設定]ページ</li>
+</ul>
 <h2>例</h2>
 <pre>
 &lt;%defblogselect(admin/default)%&gt;
@@ -7368,13 +7382,13 @@ settingsedit
 <div class="page">
 <a id="adminskinvar-configsettingsedit" name="adminskinvar-configsettingsedit"></a>
 <h1>管理領域用スキン変数：configsettingsedit</h1>
-<p>The form about the setting of a site is output.</p>
+<p>$CONFの引数に対応した値を出力します</p>
 <h2>引数</h2>
-<p>Type(DefaultListSize or SessionCookie or URLMode)</p>
+<p>出力するタイプ($CONFに設定されている引数)</p>
 <h2>スキンタイプ</h2>
-<p>
-settingsedit
-</p>
+<ul>
+	<li>[グローバル設定]ページ</li>
+</ul>
 <h2>例</h2>
 <pre>
 &lt;%configsettingsedit(URLMode)%&gt;
@@ -7385,13 +7399,13 @@ settingsedit
 <div class="page">
 <a id="adminskinvar-configsettingsyesno" name="adminskinvar-configsettingsyesno"></a>
 <h1>管理領域用スキン変数：configsettingsyesno</h1>
-<p>The form answered at yes or no about the setting of a site is output.</p>
+<p>$CONFに設定されているもののうち、「はい」「いいえ」の2択で答えられるデータのinputタグを出力します</p>
 <h2>引数</h2>
-<p>Type($CONF keys),tabindex</p>
+<p>出力するタイプ($CONFに設定されている引数),タブインデックス</p>
 <h2>スキンタイプ</h2>
-<p>
-settingsedit
-</p>
+<ul>
+	<li>[グローバル設定]ページ</li>
+</ul>
 <h2>例</h2>
 <pre>
 &lt;%configsettingsyesno(DisableSite, 10060)%&gt;
@@ -7402,13 +7416,13 @@ settingsedit
 <div class="page">
 <a id="adminskinvar-outputspecialdirs" name="adminskinvar-outputspecialdirs"></a>
 <h1>管理領域用スキン変数：outputspecialdirs</h1>
-<p>A path of a special directory is output.</p>
+<p>特別なディレクトリへのパスを出力します</p>
 <h2>引数</h2>
-<p>Type(nucleusdir or mediadir)</p>
+<p>nucleusdir 又は mediadir</p>
 <h2>スキンタイプ</h2>
-<p>
-settingsedit
-</p>
+<ul>
+	<li>[グローバル設定]ページ</li>
+</ul>
 <h2>例</h2>
 <pre>
 &lt;%outputspecialdirs(mediadir)%&gt;
@@ -7419,13 +7433,13 @@ settingsedit
 <div class="page">
 <a id="adminskinvar-jstoolbaroptions" name="adminskinvar-jstoolbaroptions"></a>
 <h1>管理領域用スキン変数：jstoolbaroptions</h1>
-<p>The select box from which the type of the tool bar of javascript is chosen is output.</p>
+<p>記事編集欄に出力するjavascriptによるツールバーのタイプを選択するためのセレクトボックスを出力します</p>
 <h2>引数</h2>
 <p>無し</p>
 <h2>スキンタイプ</h2>
-<p>
-settingsedit
-</p>
+<ul>
+	<li>[グローバル設定]ページ</li>
+</ul>
 <h2>例</h2>
 <pre>
 &lt;%jstoolbaroptions%&gt;
@@ -7436,13 +7450,13 @@ settingsedit
 <div class="page">
 <a id="adminskinvar-mediadirwarning" name="adminskinvar-mediadirwarning"></a>
 <h1>管理領域用スキン変数：mediadirwarning</h1>
-<p>Warning of a media directory is output.</p>
+<p>mediaディレクトリの入力に関する注意書きを出力します</p>
 <h2>引数</h2>
 <p>無し</p>
 <h2>スキンタイプ</h2>
-<p>
-settingsedit
-</p>
+<ul>
+	<li>[グローバル設定]ページ</li>
+</ul>
 <h2>例</h2>
 <pre>
 &lt;%mediadirwarning%&gt;
@@ -7453,13 +7467,13 @@ settingsedit
 <div class="page">
 <a id="adminskinvar-passrequestvars" name="adminskinvar-passrequestvars"></a>
 <h1>管理領域用スキン変数：passrequestvars</h1>
-<p>Place holder</p>
+<p>プレースホルダ</p>
 <h2>引数</h2>
 <p>無し</p>
 <h2>スキンタイプ</h2>
-<p>
-showlogin
-</p>
+<ul>
+	<li>[ログイン]ページ</li>
+</ul>
 <h2>例</h2>
 <pre>
 &lt;%passrequestvars%&gt;
@@ -7470,17 +7484,30 @@ showlogin
 <div class="page">
 <a id="adminskinvar-editskintype" name="adminskinvar-editskintype"></a>
 <h1>管理領域用スキン変数：editskintype</h1>
-<p>Information on the skintype which is being edited is output.</p>
+<p>設定中の「スキン」のタイプに関する情報を出力します</p>
 <h2>引数</h2>
-<p>Type(id or name or desc or type or content or skintype or skintyperaw or prefix or mode)</p>
+<ul>
+	<li>
+		出力する情報のタイプ(次のうちのどれか)
+		<ul>
+			<li>id：ID</li>
+			<li>name：名前</li>
+			<li>desc：説明</li>
+			<li>type：httpのContent-Type(skin_descテーブルのsdtypeに設定されているもの)</li>
+			<li>content：内容</li>
+			<li>skintype：スキンタイプ</li>
+			<li>skintyperaw：スーパーグローバル変数$REQUEST['type']に格納されている値</li>
+			<li>prefix：Includeプリフィックス</li>
+			<li>mode：スキンのIncludeモード</li>
+		</ul>
+	</li>
+</ul>
 <h2>スキンタイプ</h2>
-<p>
-	<ul>
-		<li>skindelete</li>
-		<li>skinedittype</li>
-		<li>skinremovetype</li>
-	</ul>
-</p>
+<ul>
+	<li>[次のスキンを削除しようとしています: ]ページ</li>
+	<li>[スキンの編集]ページ(skinedittype)</li>
+	<li>[本当にこのスペシャルスキンパーツを削除してもいいですか？]ページ</li>
+</ul>
 <h2>例</h2>
 <pre>
 &lt;%editskintype(mode)%&gt;
@@ -7491,13 +7518,26 @@ showlogin
 <div class="page">
 <a id="adminskinvar-editskin" name="adminskinvar-editskin"></a>
 <h1>管理領域用スキン変数：editskin</h1>
-<p>Information on the skin which is being edited is output.</p>
+<p>設定中の「スキン」のタイプに関する情報を出力します</p>
 <h2>引数</h2>
+<ul>
+	<li>
+		出力する情報のタイプ(次のうちのどれか)
+		<ul>
+			<li>id：ID</li>
+			<li>name：名前</li>
+			<li>desc：説明</li>
+			<li>type：httpのContent-Type(skin_descテーブルのsdtypeに設定されているもの)</li>
+			<li>prefix：Includeプリフィックス</li>
+			<li>mode：スキンのIncludeモード</li>
+		</ul>
+	</li>
+</ul>
 <p>Type(id or name or desc or type or prefix or mode)</p>
 <h2>スキンタイプ</h2>
-<p>
-skinedit
-</p>
+<ul>
+	<li>[スキンの編集]ページ(skinedit)</li>
+</ul>
 <h2>例</h2>
 <pre>
 &lt;%editskin(desc)%&gt;
@@ -7508,13 +7548,13 @@ skinedit
 <div class="page">
 <a id="adminskinvar-specialskinlist" name="adminskinvar-specialskinlist"></a>
 <h1>管理領域用スキン変数：specialskinlist</h1>
-<p>A list of special skins is output.</p>
+<p>スペシャルスキンのリストを出力します</p>
 <h2>引数</h2>
-<p>templateName</p>
+<p>テンプレート名</p>
 <h2>スキンタイプ</h2>
-<p>
-skinedit
-</p>
+<ul>
+	<li>[スキンの編集]ページ(skinedit)</li>
+</ul>
 <h2>例</h2>
 <pre>
 &lt;%specialskinlist(admin/default)%&gt;
@@ -7525,13 +7565,13 @@ skinedit
 <div class="page">
 <a id="adminskinvar-allowedskinactions" name="adminskinvar-allowedskinactions"></a>
 <h1>管理領域用スキン変数：allowedskinactions</h1>
-<p>A list with a link to help in practicable skin vars is output by the skin type of skin which is being edited at present.</p>
+<p>編集中のスキンパーツで使用可能な「スキン変数」とそのヘルプへのリンクを出力します</p>
 <h2>引数</h2>
 <p>無し</p>
 <h2>スキンタイプ</h2>
-<p>
-skinedittype
-</p>
+<ul>
+	<li>[スキンの編集]ページ(skinedittype)</li>
+</ul>
 <h2>例</h2>
 <pre>
 &lt;%allowedskinactions%&gt;
@@ -7542,13 +7582,22 @@ skinedittype
 <div class="page">
 <a id="adminskinvar-skineditallowedlist" name="adminskinvar-skineditallowedlist"></a>
 <h1>管理領域用スキン変数：skineditallowedlist</h1>
-<p>A list of template or blogs is output as an argument of practicable skin vars by the skin type which is being edited at present.</p>
+<p>編集中のスキンパーツで使用可能な「スキン変数」に対する引数として使用できる「ブログの短縮名」もしくは「テンプレート名」を出力します</p>
 <h2>引数</h2>
-<p>type(blog or temolate),templateName</p>
+<ul>
+	<li>
+		第一引数(必須)：次のどちらか
+		<ul>
+			<li>blog：ブログの短縮名</li>
+			<li>template：テンプレート名</li>
+		</ul>
+	</li>
+	<li>第二引数(オプション)：テンプレート名</li>
+</ul>
 <h2>スキンタイプ</h2>
-<p>
-skinedittype
-</p>
+<ul>
+	<li>[スキンの編集]ページ(skinedittype)</li>
+</ul>
 <h2>例</h2>
 <pre>
 &lt;%skineditallowedlist(template,admin/default)%&gt;
@@ -7559,13 +7608,13 @@ skinedittype
 <div class="page">
 <a id="adminskinvar-selectlocalskinfiles" name="adminskinvar-selectlocalskinfiles"></a>
 <h1>管理領域用スキン変数：selectlocalskinfiles</h1>
-<p>The select box from which imported skin is chosen is indicated.</p>
+<p>skinsディレクトリにあるスキンをインポートするためのセレクトボックスを出力します</p>
 <h2>引数</h2>
 <p>無し</p>
 <h2>スキンタイプ</h2>
-<p>
-skinieoverview
-</p>
+<ul>
+	<li>[読み込み/書き出し]ページ</li>
+</ul>
 <h2>例</h2>
 <pre>
 &lt;%selectlocalskinfiles%&gt;
@@ -7576,13 +7625,22 @@ skinieoverview
 <div class="page">
 <a id="adminskinvar-skinielist" name="adminskinvar-skinielist"></a>
 <h1>管理領域用スキン変数：skinielist</h1>
-<p>A list of extracted skin/template is shown to a file.</p>
+<p>インポート済みのスキン・テンプレートの一覧を出力します</p>
 <h2>引数</h2>
-<p>type,templateName</p>
+<ul>
+	<li>
+		第一引数(必須)：次のどちらか
+		<ul>
+			<li>skin：スキン</li>
+			<li>template：テンプレート</li>
+		</ul>
+	</li>
+	<li>第二引数(オプション)：テンプレート名</li>
+</ul>
 <h2>スキンタイプ</h2>
-<p>
-skinieoverview
-</p>
+<ul>
+	<li>[読み込み/書き出し]ページ</li>
+</ul>
 <h2>例</h2>
 <pre>
 &lt;%skinielist(template,admin/default)%&gt;
@@ -7593,13 +7651,13 @@ skinieoverview
 <div class="page">
 <a id="adminskinvar-skinoverview" name="adminskinvar-skinoverview"></a>
 <h1>管理領域用スキン変数：skinoverview</h1>
-<p>A list of skins.</p>
+<p>インポート済みのスキンの一覧を出力します</p>
 <h2>引数</h2>
-<p>templateName</p>
+<p>テンプレート名</p>
 <h2>スキンタイプ</h2>
-<p>
-skinoverview
-</p>
+<ul>
+	<li>[スキンの編集]ページ(skinoverview)</li>
+</ul>
 <h2>例</h2>
 <pre>
 &lt;%skinoverview(admin/default)%&gt;
@@ -7610,16 +7668,23 @@ skinoverview
 <div class="page">
 <a id="adminskinvar-edittemplateinfo" name="adminskinvar-edittemplateinfo"></a>
 <h1>管理領域用スキン変数：edittemplateinfo</h1>
-<p>Information on the template which is being edited is output.</p>
+<p>編集中のテンプレートに関する情報を出力します</p>
 <h2>引数</h2>
+<ul>
+	<li>第一引数(必須)：出力する情報のタイプ</li>
+	<li>第二引数(オプション)：テンプレートの説明</li>
+	<li>第三引数(オプション)：テンプレートパーツ名</li>
+	<li>第四引数(オプション)：第四引数に指定した文字列をアンカーにしたヘルプへのリンク</li>
+	<li>第五引数(オプション)：タブインデックス</li>
+	<li>第六引数(オプション)：テキストエリアのサイズ(「0」の時は5行、trueを返す場合は10行)</li>
+	<li>第七引数(オプション)：テンプレート名</li>
+</ul>
 <p>type[,desc[,name[,help[,tabindex[,big[,tplt]]]]]]</p>
 <h2>スキンタイプ</h2>
-<p>
-	<ul>
-		<li>templatedelete</li>
-		<li>templateedit</li>
-	</ul>
-</p>
+<ul>
+	<li>[次のテンプレートを削除しようとしています: ]ページ</li>
+	<li>[テンプレートの編集]ページ</li>
+</ul>
 <h2>例</h2>
 <pre>
 &lt;%edittemplateinfo(name)%&gt;
@@ -7630,13 +7695,13 @@ skinoverview
 <div class="page">
 <a id="adminskinvar-templateoverview" name="adminskinvar-templateoverview"></a>
 <h1>管理領域用スキン変数：templateoverview</h1>
-<p>A list of templates.</p>
+<p>テンプレートのリストを出力します</p>
 <h2>引数</h2>
-<p>templateName</p>
+<p>テンプレート名</p>
 <h2>スキンタイプ</h2>
-<p>
-templateoverview
-</p>
+<ul>
+	<li>[テンプレート一覧]ページ</li>
+</ul>
 <h2>例</h2>
 <pre>
 &lt;%templateoverview(admin/default)%&gt;
@@ -7647,13 +7712,13 @@ templateoverview
 <div class="page">
 <a id="adminskinvar-editmemberlist" name="adminskinvar-editmemberlist"></a>
 <h1>管理領域用スキン変数：editmemberlist</h1>
-<p>The members list which is being edited.</p>
+<p>設定可能なメンバーのリストを出力します</p>
 <h2>引数</h2>
-<p>templateName</p>
+<p>テンプレート名</p>
 <h2>スキンタイプ</h2>
-<p>
-usermanagement
-</p>
+<ul>
+	<li>[メンバーの管理]ページ</li>
+</ul>
 <h2>例</h2>
 <pre>
 &lt;%editmemberlist(admin/default)%&gt;
@@ -7662,12 +7727,12 @@ usermanagement
 
 <div class="page">
 <a name="skinpartactionlog" id="skinpartactionlog"></a>
-<h1>Admin skins: actionlog</h1>
+<h1>管理エリアスキン： [管理操作履歴]ページ</h1>
 <p>
-This skinpart is used to actionlog.
+管理エリアで行われた操作(ログイン、ログアウト含む)のログを表示するページ
 </p>
 <p>
-Very basic buildup for a [Action Log]page page.
+「[管理操作履歴]ページ」の基本的な形：
 </p>
 <pre>
 
@@ -7685,12 +7750,12 @@ Very basic buildup for a [Action Log]page page.
 </pre>
 </div><div class="page">
 <a name="skinpartactivate" id="skinpartactivate"></a>
-<h1>Admin skins: activate</h1>
+<h1>管理エリアスキン：[アクティベーション]ページ</h1>
 <p>
 This skinpart is used to activate.
 </p>
 <p>
-Very basic buildup for a [Account Activation]page page.
+「[アクティベーション]ページ」の基本的な形：
 </p>
 <pre>
 
@@ -7727,7 +7792,7 @@ Very basic buildup for a [Account Activation]page page.
 </pre>
 </div><div class="page">
 <a name="skinpartactivatesetpwd" id="skinpartactivatesetpwd"></a>
-<h1>Admin skins: activatesetpwd</h1>
+<h1>管理エリアスキン： activatesetpwd</h1>
 <p>
 This skinpart is used to activatesetpwd.
 </p>
@@ -7744,7 +7809,7 @@ Very basic buildup for a [Set Password]page page.
 </pre>
 </div><div class="page">
 <a name="skinpartaddnewlog" id="skinpartaddnewlog"></a>
-<h1>Admin skins: addnewlog</h1>
+<h1>管理エリアスキン： addnewlog</h1>
 <p>
 This skinpart is used to addnewlog.
 </p>
@@ -7817,7 +7882,7 @@ Very basic buildup for a [New weblog created]page page.
 </pre>
 </div><div class="page">
 <a name="skinpartadminerrorpage" id="skinpartadminerrorpage"></a>
-<h1>Admin skins: adminerrorpage</h1>
+<h1>管理エリアスキン： adminerrorpage</h1>
 <p>
 This skinpart is used to adminerrorpage.
 </p>
@@ -7835,7 +7900,7 @@ Very basic buildup for a Nucleus management...:[Error]page page.
 </pre>
 </div><div class="page">
 <a name="skinpartadminskindelete" id="skinpartadminskindelete"></a>
-<h1>Admin skins: adminskindelete</h1>
+<h1>管理エリアスキン： adminskindelete</h1>
 <p>
 This skinpart is used to adminskindelete.
 </p>
@@ -7860,7 +7925,7 @@ Very basic buildup for a Admin layout:[You're about to delete the skin named ]pa
 </pre>
 </div><div class="page">
 <a name="skinpartadminskinedit" id="skinpartadminskinedit"></a>
-<h1>Admin skins: adminskinedit</h1>
+<h1>管理エリアスキン： adminskinedit</h1>
 <p>
 This skinpart is used to adminskinedit.
 </p>
@@ -7928,7 +7993,7 @@ Very basic buildup for a Admin layout:[Edit skin]page page.
 </pre>
 </div><div class="page">
 <a name="skinpartadminskinedittype" id="skinpartadminskinedittype"></a>
-<h1>Admin skins: adminskinedittype</h1>
+<h1>管理エリアスキン： adminskinedittype</h1>
 <p>
 This skinpart is used to adminskinedittype.
 </p>
@@ -7969,7 +8034,7 @@ Very basic buildup for a Admin layout:[Edit Skin]page page.
 </pre>
 </div><div class="page">
 <a name="skinpartadminskiniedoimport" id="skinpartadminskiniedoimport"></a>
-<h1>Admin skins: adminskiniedoimport</h1>
+<h1>管理エリアスキン： adminskiniedoimport</h1>
 <p>
 This skinpart is used to adminskiniedoimport.
 </p>
@@ -7993,7 +8058,7 @@ Very basic buildup for a Admin layout:[Done Importing]page page.
 </pre>
 </div><div class="page">
 <a name="skinpartadminskinieimport" id="skinpartadminskinieimport"></a>
-<h1>Admin skins: adminskinieimport</h1>
+<h1>管理エリアスキン： adminskinieimport</h1>
 <p>
 This skinpart is used to adminskinieimport.
 </p>
@@ -8035,7 +8100,7 @@ Very basic buildup for a Admin layout:[About to import skins and templates]page 
 </pre>
 </div><div class="page">
 <a name="skinpartadminskinieoverview" id="skinpartadminskinieoverview"></a>
-<h1>Admin skins: adminskinieoverview</h1>
+<h1>管理エリアスキン： adminskinieoverview</h1>
 <p>
 This skinpart is used to adminskinieoverview.
 </p>
@@ -8116,7 +8181,7 @@ Very basic buildup for a Admin layout:[Import/Export]page page.
 </pre>
 </div><div class="page">
 <a name="skinpartadminskinoverview" id="skinpartadminskinoverview"></a>
-<h1>Admin skins: adminskinoverview</h1>
+<h1>管理エリアスキン： adminskinoverview</h1>
 <p>
 This skinpart is used to adminskinoverview.
 </p>
@@ -8158,7 +8223,7 @@ Very basic buildup for a Admin layout:[Skins]page page.
 </pre>
 </div><div class="page">
 <a name="skinpartadminskinremovetype" id="skinpartadminskinremovetype"></a>
-<h1>Admin skins: adminskinremovetype</h1>
+<h1>管理エリアスキン： adminskinremovetype</h1>
 <p>
 This skinpart is used to adminskinremovetype.
 </p>
@@ -8185,7 +8250,7 @@ Very basic buildup for a Admin layout:[Do you really want to delete this special
 </pre>
 </div><div class="page">
 <a name="skinpartadmintemplatedelete" id="skinpartadmintemplatedelete"></a>
-<h1>Admin skins: admintemplatedelete</h1>
+<h1>管理エリアスキン： admintemplatedelete</h1>
 <p>
 This skinpart is used to admintemplatedelete.
 </p>
@@ -8210,7 +8275,7 @@ Very basic buildup for a Admin layout:[You're about to delete the template named
 </pre>
 </div><div class="page">
 <a name="skinpartadmintemplateedit" id="skinpartadmintemplateedit"></a>
-<h1>Admin skins: admintemplateedit</h1>
+<h1>管理エリアスキン： admintemplateedit</h1>
 <p>
 This skinpart is used to admintemplateedit.
 </p>
@@ -8411,7 +8476,7 @@ Very basic buildup for a Admin layout:[Edit Template]page page.
 </pre>
 </div><div class="page">
 <a name="skinpartadmntemplateoverview" id="skinpartadmntemplateoverview"></a>
-<h1>Admin skins: admntemplateoverview</h1>
+<h1>管理エリアスキン： admntemplateoverview</h1>
 <p>
 This skinpart is used to admntemplateoverview.
 </p>
@@ -8453,7 +8518,7 @@ Very basic buildup for a Admin layout:[Template overview]page page.
 </pre>
 </div><div class="page">
 <a name="skinpartbackupoverview" id="skinpartbackupoverview"></a>
-<h1>Admin skins: backupoverview</h1>
+<h1>管理エリアスキン： backupoverview</h1>
 <p>
 This skinpart is used to backupoverview.
 </p>
@@ -8496,7 +8561,7 @@ Very basic buildup for a [Backups]page page.
 </pre>
 </div><div class="page">
 <a name="skinpartbackuprestore" id="skinpartbackuprestore"></a>
-<h1>Admin skins: backuprestore</h1>
+<h1>管理エリアスキン： backuprestore</h1>
 <p>
 This skinpart is used to backuprestore.
 </p>
@@ -8512,7 +8577,7 @@ Very basic buildup for a [Restore Complete]page page.
 </pre>
 </div><div class="page">
 <a name="skinpartbanlist" id="skinpartbanlist"></a>
-<h1>Admin skins: banlist</h1>
+<h1>管理エリアスキン： banlist</h1>
 <p>
 This skinpart is used to banlist.
 </p>
@@ -8531,7 +8596,7 @@ Very basic buildup for a [Ban List for]page page.
 </pre>
 </div><div class="page">
 <a name="skinpartbanlistdelete" id="skinpartbanlistdelete"></a>
-<h1>Admin skins: banlistdelete</h1>
+<h1>管理エリアスキン： banlistdelete</h1>
 <p>
 This skinpart is used to banlistdelete.
 </p>
@@ -8576,7 +8641,7 @@ Very basic buildup for a [Remove Ban]page page.
 </pre>
 </div><div class="page">
 <a name="skinpartbanlistdeleteconfirm" id="skinpartbanlistdeleteconfirm"></a>
-<h1>Admin skins: banlistdeleteconfirm</h1>
+<h1>管理エリアスキン： banlistdeleteconfirm</h1>
 <p>
 This skinpart is used to banlistdeleteconfirm.
 </p>
@@ -8597,7 +8662,7 @@ Very basic buildup for a [Ban Removed]page page.
 </pre>
 </div><div class="page">
 <a name="skinpartbanlistnew" id="skinpartbanlistnew"></a>
-<h1>Admin skins: banlistnew</h1>
+<h1>管理エリアスキン： banlistnew</h1>
 <p>
 This skinpart is used to banlistnew.
 </p>
@@ -8640,7 +8705,7 @@ Very basic buildup for a [Add New Ban]page page.
 </pre>
 </div><div class="page">
 <a name="skinpartbatchcategory" id="skinpartbatchcategory"></a>
-<h1>Admin skins: batchcategory</h1>
+<h1>管理エリアスキン： batchcategory</h1>
 <p>
 This skinpart is used to batchcategory.
 </p>
@@ -8662,7 +8727,7 @@ Very basic buildup for a [Batch operation on categories]page page.
 </pre>
 </div><div class="page">
 <a name="skinpartbatchcomment" id="skinpartbatchcomment"></a>
-<h1>Admin skins: batchcomment</h1>
+<h1>管理エリアスキン： batchcomment</h1>
 <p>
 This skinpart is used to batchcomment.
 </p>
@@ -8683,7 +8748,7 @@ Very basic buildup for a [Batch operation on comments]page page.
 </pre>
 </div><div class="page">
 <a name="skinpartbatchdelete" id="skinpartbatchdelete"></a>
-<h1>Admin skins: batchdelete</h1>
+<h1>管理エリアスキン： batchdelete</h1>
 <p>
 This skinpart is used to batchdelete.
 </p>
@@ -8709,7 +8774,7 @@ Very basic buildup for a [Confirm Batch Deletion]page page.
 </pre>
 </div><div class="page">
 <a name="skinpartbatchitem" id="skinpartbatchitem"></a>
-<h1>Admin skins: batchitem</h1>
+<h1>管理エリアスキン： batchitem</h1>
 <p>
 This skinpart is used to batchitem.
 </p>
@@ -8730,7 +8795,7 @@ Very basic buildup for a [Batch operation on items]page page.
 </pre>
 </div><div class="page">
 <a name="skinpartbatchmember" id="skinpartbatchmember"></a>
-<h1>Admin skins: batchmember</h1>
+<h1>管理エリアスキン： batchmember</h1>
 <p>
 This skinpart is used to batchmember.
 </p>
@@ -8751,7 +8816,7 @@ Very basic buildup for a [Batch operation on members]page page.
 </pre>
 </div><div class="page">
 <a name="skinpartbatchmove" id="skinpartbatchmove"></a>
-<h1>Admin skins: batchmove</h1>
+<h1>管理エリアスキン： batchmove</h1>
 <p>
 This skinpart is used to batchmove.
 </p>
@@ -8777,7 +8842,7 @@ Very basic buildup for a [Item move other category/Category move other blog]page
 </pre>
 </div><div class="page">
 <a name="skinpartbatchmovecat" id="skinpartbatchmovecat"></a>
-<h1>Admin skins: batchmovecat</h1>
+<h1>管理エリアスキン： batchmovecat</h1>
 <p>
 This skinpart is used to batchmovecat.
 </p>
@@ -8803,7 +8868,7 @@ Very basic buildup for a [Select blog to move category to]page page.
 </pre>
 </div><div class="page">
 <a name="skinpartbatchteam" id="skinpartbatchteam"></a>
-<h1>Admin skins: batchteam</h1>
+<h1>管理エリアスキン： batchteam</h1>
 <p>
 This skinpart is used to batchteam.
 </p>
@@ -8824,7 +8889,7 @@ Very basic buildup for a [Batch operation on team members]page page.
 </pre>
 </div><div class="page">
 <a name="skinpartblogcommentlist" id="skinpartblogcommentlist"></a>
-<h1>Admin skins: blogcommentlist</h1>
+<h1>管理エリアスキン： blogcommentlist</h1>
 <p>
 This skinpart is used to blogcommentlist.
 </p>
@@ -8841,7 +8906,7 @@ Very basic buildup for a [All Comments for blog]page page.
 </pre>
 </div><div class="page">
 <a name="skinpartblogsettings" id="skinpartblogsettings"></a>
-<h1>Admin skins: blogsettings</h1>
+<h1>管理エリアスキン： blogsettings</h1>
 <p>
 This skinpart is used to blogsettings.
 </p>
@@ -8993,7 +9058,7 @@ Very basic buildup for a [Edit Blog Settings]page page.
 </pre>
 </div><div class="page">
 <a name="skinpartbookmarklet" id="skinpartbookmarklet"></a>
-<h1>Admin skins: bookmarklet</h1>
+<h1>管理エリアスキン： bookmarklet</h1>
 <p>
 This skinpart is used to bookmarklet.
 </p>
@@ -9018,7 +9083,7 @@ Very basic buildup for a [Bookmarklet<!-- and Right Click Menu -->]page page.
 </pre>
 </div><div class="page">
 <a name="skinpartbrowseowncomments" id="skinpartbrowseowncomments"></a>
-<h1>Admin skins: browseowncomments</h1>
+<h1>管理エリアスキン： browseowncomments</h1>
 <p>
 This skinpart is used to browseowncomments.
 </p>
@@ -9035,7 +9100,7 @@ Very basic buildup for a [Your Comments]page page.
 </pre>
 </div><div class="page">
 <a name="skinpartbrowseownitems" id="skinpartbrowseownitems"></a>
-<h1>Admin skins: browseownitems</h1>
+<h1>管理エリアスキン： browseownitems</h1>
 <p>
 This skinpart is used to browseownitems.
 </p>
@@ -9052,7 +9117,7 @@ Very basic buildup for a [Your items]page page.
 </pre>
 </div><div class="page">
 <a name="skinpartcategorydelete" id="skinpartcategorydelete"></a>
-<h1>Admin skins: categorydelete</h1>
+<h1>管理エリアスキン： categorydelete</h1>
 <p>
 This skinpart is used to categorydelete.
 </p>
@@ -9079,7 +9144,7 @@ Very basic buildup for a [You're about to delete the category (batch)]page page.
 </pre>
 </div><div class="page">
 <a name="skinpartcategoryedit" id="skinpartcategoryedit"></a>
-<h1>Admin skins: categoryedit</h1>
+<h1>管理エリアスキン： categoryedit</h1>
 <p>
 This skinpart is used to categoryedit.
 </p>
@@ -9125,7 +9190,7 @@ Very basic buildup for a [Update Category]page page.
 </pre>
 </div><div class="page">
 <a name="skinpartcommentdelete" id="skinpartcommentdelete"></a>
-<h1>Admin skins: commentdelete</h1>
+<h1>管理エリアスキン： commentdelete</h1>
 <p>
 This skinpart is used to commentdelete.
 </p>
@@ -9152,7 +9217,7 @@ Very basic buildup for a [You're about to delete the following comment:(batch)]p
 </pre>
 </div><div class="page">
 <a name="skinpartcommentedit" id="skinpartcommentedit"></a>
-<h1>Admin skins: commentedit</h1>
+<h1>管理エリアスキン： commentedit</h1>
 <p>
 This skinpart is used to commentedit.
 </p>
@@ -9207,7 +9272,7 @@ Very basic buildup for a [Edit Comments]page page.
 </pre>
 </div><div class="page">
 <a name="skinpartcreateaccountdisable" id="skinpartcreateaccountdisable"></a>
-<h1>Admin skins: createaccountdisable</h1>
+<h1>管理エリアスキン： createaccountdisable</h1>
 <p>
 This skinpart is used to createaccountdisable.
 </p>
@@ -9226,7 +9291,7 @@ Very basic buildup for a [Visitors are not allowed to create a Member Account.<b
 </pre>
 </div><div class="page">
 <a name="skinpartcreateaccountinput" id="skinpartcreateaccountinput"></a>
-<h1>Admin skins: createaccountinput</h1>
+<h1>管理エリアスキン： createaccountinput</h1>
 <p>
 This skinpart is used to createaccountinput.
 </p>
@@ -9267,7 +9332,7 @@ Very basic buildup for a [Create Member Account]page page.
 </pre>
 </div><div class="page">
 <a name="skinpartcreateaccountsuccess" id="skinpartcreateaccountsuccess"></a>
-<h1>Admin skins: createaccountsuccess</h1>
+<h1>管理エリアスキン： createaccountsuccess</h1>
 <p>
 This skinpart is used to createaccountsuccess.
 </p>
@@ -9286,7 +9351,7 @@ Very basic buildup for a [Create Account]page page.
 </pre>
 </div><div class="page">
 <a name="skinpartcreateitem" id="skinpartcreateitem"></a>
-<h1>Admin skins: createitem</h1>
+<h1>管理エリアスキン： createitem</h1>
 <p>
 This skinpart is used to createitem.
 </p>
@@ -9570,7 +9635,7 @@ Very basic buildup for a [Add new item to]page page.
 </pre>
 </div><div class="page">
 <a name="skinpartcreatenewlog" id="skinpartcreatenewlog"></a>
-<h1>Admin skins: createnewlog</h1>
+<h1>管理エリアスキン： createnewlog</h1>
 <p>
 This skinpart is used to createnewlog.
 </p>
@@ -9644,7 +9709,7 @@ Very basic buildup for a [Create new weblog]page page.
 </pre>
 </div><div class="page">
 <a name="skinpartdeleteblog" id="skinpartdeleteblog"></a>
-<h1>Admin skins: deleteblog</h1>
+<h1>管理エリアスキン： deleteblog</h1>
 <p>
 This skinpart is used to deleteblog.
 </p>
@@ -9670,7 +9735,7 @@ Very basic buildup for a [Warning! Deleting a blog will delete ALL items of that
 </pre>
 </div><div class="page">
 <a name="skinparteditmembersettings" id="skinparteditmembersettings"></a>
-<h1>Admin skins: editmembersettings</h1>
+<h1>管理エリアスキン： editmembersettings</h1>
 <p>
 This skinpart is used to editmembersettings.
 </p>
@@ -9767,7 +9832,7 @@ Very basic buildup for a [Edit Member]page page.
 </pre>
 </div><div class="page">
 <a name="skinpartforgotpassword" id="skinpartforgotpassword"></a>
-<h1>Admin skins: forgotpassword</h1>
+<h1>管理エリアスキン： forgotpassword</h1>
 <p>
 This skinpart is used to forgotpassword.
 </p>
@@ -9797,7 +9862,7 @@ Very basic buildup for a [Forgot your password?]page page.
 </pre>
 </div><div class="page">
 <a name="skinpartitemcommentlist" id="skinpartitemcommentlist"></a>
-<h1>Admin skins: itemcommentlist</h1>
+<h1>管理エリアスキン： itemcommentlist</h1>
 <p>
 This skinpart is used to itemcommentlist.
 </p>
@@ -9814,7 +9879,7 @@ Very basic buildup for a [Comments]page page.
 </pre>
 </div><div class="page">
 <a name="skinpartitemdelete" id="skinpartitemdelete"></a>
-<h1>Admin skins: itemdelete</h1>
+<h1>管理エリアスキン： itemdelete</h1>
 <p>
 This skinpart is used to itemdelete.
 </p>
@@ -9841,7 +9906,7 @@ Very basic buildup for a [You're about to delete the item following item:]page p
 </pre>
 </div><div class="page">
 <a name="skinpartitemedit" id="skinpartitemedit"></a>
-<h1>Admin skins: itemedit</h1>
+<h1>管理エリアスキン： itemedit</h1>
 <p>
 This skinpart is used to itemedit.
 </p>
@@ -10148,7 +10213,7 @@ Very basic buildup for a [Edit Item]page page.
 </pre>
 </div><div class="page">
 <a name="skinpartitemlist" id="skinpartitemlist"></a>
-<h1>Admin skins: itemlist</h1>
+<h1>管理エリアスキン： itemlist</h1>
 <p>
 This skinpart is used to itemlist.
 </p>
@@ -10166,7 +10231,7 @@ Very basic buildup for a [Items for blog]page page.
 </pre>
 </div><div class="page">
 <a name="skinpartitemmove" id="skinpartitemmove"></a>
-<h1>Admin skins: itemmove</h1>
+<h1>管理エリアスキン： itemmove</h1>
 <p>
 This skinpart is used to itemmove.
 </p>
@@ -10188,7 +10253,7 @@ Very basic buildup for a [Move to which blog?]page page.
 </pre>
 </div><div class="page">
 <a name="skinpartmanage" id="skinpartmanage"></a>
-<h1>Admin skins: manage</h1>
+<h1>管理エリアスキン： manage</h1>
 <p>
 This skinpart is used to manage.
 </p>
@@ -10225,7 +10290,7 @@ Very basic buildup for a [Nucleus management...]page page.
 </pre>
 </div><div class="page">
 <a name="skinpartmanageteam" id="skinpartmanageteam"></a>
-<h1>Admin skins: manageteam</h1>
+<h1>管理エリアスキン： manageteam</h1>
 <p>
 This skinpart is used to manageteam.
 </p>
@@ -10267,7 +10332,7 @@ Very basic buildup for a [Manage team for blog ]page page.
 </pre>
 </div><div class="page">
 <a name="skinpartmemberdelete" id="skinpartmemberdelete"></a>
-<h1>Admin skins: memberdelete</h1>
+<h1>管理エリアスキン： memberdelete</h1>
 <p>
 This skinpart is used to memberdelete.
 </p>
